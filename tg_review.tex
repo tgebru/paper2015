@@ -1,0 +1,317 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage{cvpr}
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Include other packages here, before hyperref.
+
+% If you comment hyperref and then uncomment it, you should delete
+% egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
+% run, let it finish, and you should be clear).
+\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref}
+
+% \cvprfinalcopy % *** Uncomment this line for the final submission
+
+\def\cvprPaperID{****} % *** Enter the CVPR Paper ID here
+\def\httilde{\mbox{\tt\raisebox{-.5ex}{\symbol{126}}}}
+
+% Pages are numbered in submission mode, and unnumbered in camera-ready
+\ifcvprfinal\pagestyle{empty}\fi
+\begin{document}
+
+%%%%%%%%% TITLE
+\title{Beyond fine-grained classification: Using fine-grain detection to understad society}
+
+\author{First Author\\
+Institution1\\
+Institution1 address\\
+{\tt\small firstauthor@i1.org}
+% For a paper whose authors are all at the same institution,
+% omit the following lines up until the closing ``}''.
+% Additional authors and addresses can be added with ``\and'',
+% just like the second author.
+% To save space, use either the email address or home page, not both
+\and
+Second Author\\
+Institution2\\
+First line of institution2 address\\
+{\tt\small secondauthor@i2.org}
+}
+
+\maketitle
+%\thispagestyle{empty}
+
+%%%%%%%%% ABSTRACT
+\begin{abstract}
+Detecting a large number of BMWs in images informs us that those images may be of a wealthy area. Conversely,knowing that our images were obtained from a wealthy neighborhood increases the likelihood of detecting expensive cars. We explore this relationship between demographic factors and fine-grain classes by performing large scale detection of over 2600 car classes and conducting a social analysis of unprecedented scale in computer vision. Using 45 million images from 200 of the biggest cities in the United States,we predict demographic factors such as neighborhood wealth and crime statistics. In addition to showing high correlation with census data, we gain interesting insights regarding the relationship between different fine-grain classes and neighborhood statistics. Finally we show that just as fine-grain classes provide demographic infromation, societal cues can assist in fine-grain classification and improve accuracy. To facilitate our work, we have collected the largest and most challenging fine-grain dataset reported to date consisting of 3147 classes of cars comprised of images from google streetview and other web sources and classified by car experts to account for even the most subtle of visual differences. We hope our work ushers in a new research area fusing fine-grained object detection and societal analysis.
+\end{abstract}
+
+\section{Introduction}
+%%%%%%%%% BODY TEXT
+The ubiquity of streetview images has jumpstarted a new line of computer vision research focused on understanding cities through images \cite{mit_plos_1}~\cite{MIT_vision}~\cite{tamara}. For example, Hedalgo et al show that crime predictions can be improved by incorporating human perceptions of neighborhoods' images rather than using census data such as income alone~\cite{mit_plos_1} and Tamara's guy et al. and MIT people learn these perceptions using computer vision techniques. However, in order to extend these methods to other cities,extensive annotations of millions of images from each city would be required since, as tamara showed, algorithms trained on images of Boston, for example, cannot predict safety or wealth on images from San Francisco.  We explore the question of learning social priors using large scale fine-grain classifications of cars and show that many neighborhood statistics such as income and crime rate can be predicted from car detections. Furthermore, using our detections in conjunction with census data,we can answer questions like what types of cars do rich/poor people drive? 
+
+\begin{figure}[t]
+\begin{center}
+\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
+   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
+\end{center}
+   \caption{Example of caption.  It is set in Roman so that mathematics
+   (always set in Roman: $B \sin A = A \sin B$) may be included without an
+   ugly clash.}
+\label{fig:pull}
+%\label{fig:onecol}
+\end{figure}
+
+Finally we show that we can use the answers to these questions to help improve fine-grained classification. Although an increasing number of images that we interact with daily are associated with GPS tags, there are very few computer vision algorithms that take advantage of location based metadata. This metadata can be especially important in fine grain classification. For example, just as detecting a large number of expensive cars in one area can give us a hint that we are in the vicinity of a wealthy neighborhood, knowing that we are in a wealthy neighborhood can also increase our likelyhood of detecting expensive cars. Similarly, knowing that we are in a farm area increases our liklihood of detecting farm related cars and seeing many family households with young children increases our likelihood of detecting SUVs. We show that this information can be leveraged to improve fine-grain classification. Although there has been previous work on learning spatio-temporal priors for fine-grain classification~\cite{birdsnap} and exploiting streetview geometry and GIS systems to improve object detection~\cite{nyc3D,amir} to our knowledge this is the first time census data and other social cues have been used to assist in fine-grain classification.  
+
+
+Summarizing our contributions:
+  \begin{enumerate}
+    \item We perform a large scale analysis of cities using our car detections and present intuitive as well as interesting insights
+    \item We show that using social cues extracted from census data can improve fine-grain classificaiton accuracy
+    \item We present the largest fine-grain car dataset reported to our knowledge, complete with geotags and class as well as geography metadata  
+    \item We include a larger set of 45 million streetview images with car detections and fine-grain class predictions
+  \end{enumerate}
+
+%-------------------------------------------------------------------------
+%\begin{figure*}
+%\begin{center}
+%\fbox{\rule{0pt}{2in} \rule{.9\linewidth}{0pt}}
+%\end{center}
+%   \caption{Example of a short caption, which should be centered.}
+%\label{fig:short}
+%\end{figure*}
+
+\begin{figure}[t]
+\begin{center}
+\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
+   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
+\end{center}
+   \caption{Example of caption.  It is set in Roman so that mathematics
+   (always set in Roman: $B \sin A = A \sin B$) may be included without an
+   ugly clash.}
+\label{fig:data}
+%\label{fig:onecol}
+\end{figure}
+%------------------------------------------------------------------------
+\section{Related Work}
+\textbf{Analysis of cities using images.}
+  \begin{enumerate}
+     \item Plos one journal from MIT asking people to predict whether an area is safe/wealthy etc... after looking at the images
+     \item streetscore MIT paper predicting safety wealth scores etc.. just from images~\cite{MIT_vision}
+     \item tamara Berg's paper on safety on ECCV
+     ~\cite{zhang2014part}
+     ~\cite{caltech_birds}
+\textbf{Using GPS data to improve object detection.}
+     \item Amir's work in GIS assisted object detections. For objects like streetlamps and trashcans, uses GIS to reproject objects to a plane and reduce the search space for object detection .
+     \item NYC 3D uses geographic elevation data to create view-point aware detectors and extract ground planes for  them
+
+  \end{enumerate}
+
+%------------------------------------------------------------------------
+\section{Cars and Cities dataset}
+Our dataset consists of W number of images annotated with bounding boxes and fine-grained classes for training and validating fine-grained car detectors and 45 million streetview images for societal analysis.
+
+\subsection{Images with Labeled fine-grained classes}
+Out of the images annotated with fine-grained classes and bounding boxes, X were obtained from google streetview, Y from craigslist.com and Z from cars.com. A of our images have bounding boxes for cars and B are annotated with fine-grain labels. The bounding boxes were obtained through a series of AMT tasks. The fine-grain labels were created by first coming up with a classlist of 18000 cars comprising of all cars listed on edmunds.com and grouping them into visualy indistinguishable sets of groups using a series of amazon mechanical turk tasks as well as manual labor by the authors. After creating an exhaustive class list of 3147 classes, images from craigslist and cars.com were labeled by parsing the posting titles while cars from google streetview were labeled using 100 hired car experts.
+
+\begin{figure}[t]
+\begin{center}
+\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
+   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
+\end{center}
+   \caption{Example of caption.  It is set in Roman so that mathematics
+   (always set in Roman: $B \sin A = A \sin B$) may be included without an
+   ugly clash.}
+\label{fig:dataset1}
+%\label{fig:onecol}
+\end{figure}
+
+\begin{figure}[t]
+\begin{center}
+\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
+   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
+\end{center}
+   \caption{Example of caption.  It is set in Roman so that mathematics
+   (always set in Roman: $B \sin A = A \sin B$) may be included without an
+   ugly clash.}
+\label{fig:dataset2}
+%\label{fig:onecol}
+\end{figure}
+
+\begin{figure}[t]
+\begin{center}
+\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
+   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
+\end{center}
+   \caption{Example of caption.  It is set in Roman so that mathematics
+   (always set in Roman: $B \sin A = A \sin B$) may be included without an
+   ugly clash.}
+\label{fig:dataset3}
+%\label{fig:onecol}
+\end{figure}
+
+Fig.~\ref{fig:dataset1} shows example images from our data while Fig.~\ref{fig:dataset2} shows some image statistics. Images from craigslist.com and cars.com have one large bounding box whereas google streetview images have multiple small boxes with cars that are blurred and occluded. As shown in Fig.~\ref{fig:dataset3} the different finegrained classes are very difficult to distinguish
+
+\subsection{Images with no labeled fine-grained classes}
+In order to perform societal analysis, we collected 45 million google streetview images from 8 million points in 200 of the biggest cities in the United States. These images were collected by sampling latitude,longitude points on roads, spaced 25 meters apart. Fig.~\ref{fig:dataset4} shows maps from two cities with the samples that were collected and fig.~\ref{fig:dataset5} shows the number of samples for the 10 biggest cities. For each sample, we collect images at 0,60,120,180,240,300 degrees.
+
+\begin{figure}[t]
+\begin{center}
+\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
+   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
+\end{center}
+   \caption{Example of caption.  It is set in Roman so that mathematics
+   (always set in Roman: $B \sin A = A \sin B$) may be included without an
+   ugly clash.}
+\label{fig:dataset4}
+%\label{fig:onecol}
+\end{figure}
+
+\begin{figure}[t]
+\begin{center}
+\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
+   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
+\end{center}
+   \caption{Example of caption.  It is set in Roman so that mathematics
+   (always set in Roman: $B \sin A = A \sin B$) may be included without an
+   ugly clash.}
+\label{fig:dataset5}
+%\label{fig:onecol}
+\end{figure}
+
+\section{Car detection and fine-grained classification}
+In order to detect and classify 45 million images, we need to use an efficient car detection and classification algorithm. Although RCNN ~\cite{rcnn} has been shown to be state of the art in object detection, it's memory and computation requirement make it impossible for use in a large scale detection problem such as ours. Specifically training with RCNN  would require XXXXGB of memory and XXXX GPUs and car detection on 45 million images would take XXminutes per bounding box on XXX machine. We therefore used a simple DPM model with 0 components to detect cars and a standard CNN from Alex etal ~\cite{alexnet} to perform classification on the detected bounding boxes. As shown in Fig.~\ref{fig:dpm_acc} there is only an XX\% drop in average precision between using a dpm with 0 components and 0 parts and one with XXX components and YYY parts.
+
+\begin{figure}[t]
+\begin{center}
+\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
+   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
+\end{center}
+   \caption{Example of caption.  It is set in Roman so that mathematics
+   (always set in Roman: $B \sin A = A \sin B$) may be included without an
+   ugly clash.}
+\label{fig:dataset5}
+%\label{fig:onecol}
+\end{figure}
+
+In order to classify the detected cars, we train a standard CNN from ~\cite{alexnet} using caffe ~\cite{caffe}.Although our aim is to train fine-grain detections for streetview images, many of our training images are obtained from other web sources due to the fact that annotating streetview images is expensive. Thus we apply various deformations such as blurring and aspect ratio distortion in an attempt to deform the web images into streetview images. Table~\ref{table:acc-deformation} shows the obtained accruacy after adding each deformation. During test time, we classify the top 10\% scoring dpm bounding boxes using our CNN. This speeds up classification time by 10X while only resulting in a drop of .5 AP. 
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+Method & Frobnability \\
+\hline\hline
+Theirs & Frumpy \\
+Yours & Frobbly \\
+Ours & Makes one's heart Frob\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Results.Ours is better.}
+\label{table:acc-deformation}
+\end{table}
+
+\section{Societal analysis}
+After collecting data, training fine-grained car detectors and classifying cars in all of our images, we are now ready to perform some social analysis. We show some general results from the entire united states as well as a case study from Massachussettes.
+
+\subsection{What do poor people drive and what do rich people drive?}
+We gathered zipcode level 2007-2012 American Community Survey data for the 200 cities in our dataset and analysized how the census data relates to statistics from our detected cars. Fig.~\ref{fig:corrs} shows some of the results of our analysis.As expected,median household income is highly correlated with the average car price per zipcode.   
+\begin{figure}[t]
+\begin{center}
+\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
+   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
+\end{center}
+   \caption{Example of caption.  It is set in Roman so that mathematics
+   (always set in Roman: $B \sin A = A \sin B$) may be included without an
+   ugly clash.}
+\label{fig:corrs}
+%\label{fig:onecol}
+\end{figure}
+
+\section{Using social priors to improve classification}
+As shown in section ~\ref{section:Societal analysis} there is a very high correlation between some census variables such as income, and car attributes such as price and year. Given this relationship, we explore the use of census data to improve our fine-grain classification.
+\subsection{Analysing classification accuracy}
+Although we are classifying 2657 classes,it is important to know whether our classification errors are between highly similar or dissimilar classes. Fig. ~\ref{fig:fg-hierarchy} shows one of a few possible hierarchies of car classes. As shown in Fig. ~\ref{fig:percent-error}, most of the errors are lower in the hierarchy and are at the level of trims and years.  
+
+Since census data is most highly correlated with aggregate car attributes, one question is how much knowing ground truth car attributes would help in classification accuracy. Table~\ref{table:car-att} lists the classification accuracy after using ground truth car attributes. Surprisingly, knowing the manufactured country of the car gives very little gain in accuracy (~0.5\%). However, localizing the car price within one of two bins of expensive vs cheap cars provides a gain in accruacy of ~3\%. Looking at the confusion matricies in fig. ~\ref{fig:fg-confusion} we can see that after dividing the price into 5 bins using quantiles some expensive cars are confused with cheap cars where as most car countries of origin are not confused with other countries, except for one case of confusion between South Korean and Japanese cars. 
+
+We take this experiment further and plot accuracy Vs. price bin in fig.~\ref{fig:price-acc} for various numbers of price bins, all generated using quantiles,localized to various degrees of accuracy. For example, we can see that if we localize the price of the car to one of 4 bins we would get an 8\% increase in classification accuracy. However, even localizing the price to within 3 out of those 4 bins would result in a ~1\% increase.
+
+\begin{figure}[t]
+\begin{center}
+\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
+   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
+\end{center}
+   \caption{Example of caption.  It is set in Roman so that mathematics
+   (always set in Roman: $B \sin A = A \sin B$) may be included without an
+   ugly clash.}
+\label{fig:percent-error}
+%\label{fig:onecol}
+\end{figure}
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+Method & Frobnability \\
+\hline\hline
+Theirs & Frumpy \\
+Yours & Frobbly \\
+Ours & Makes one's heart Frob\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Results.Ours is better.}
+\label{table:car-att}
+\end{table}
+
+\begin{figure}[t]
+\begin{center}
+\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
+   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
+\end{center}
+   \caption{Example of caption.  It is set in Roman so that mathematics
+   (always set in Roman: $B \sin A = A \sin B$) may be included without an
+   ugly clash.}
+\label{fig:fg-hierarchy}
+%\label{fig:onecol}
+\end{figure}
+
+\begin{figure}[t]
+\begin{center}
+\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
+   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
+\end{center}
+   \caption{Example of caption.  It is set in Roman so that mathematics
+   (always set in Roman: $B \sin A = A \sin B$) may be included without an
+   ugly clash.}
+\label{fig:fg-confusion}
+%\label{fig:onecol}
+\end{figure}
+
+\subsection{Using census priors to predict attributes}
+As shown in ~\cite{birdsnap} ~\cite{Other context stuff} using contextual priors can improve object classification accuracy. In order to directly use census information as a prior,
+
+
+\section{Conclusion}
+
+{\small
+\bibliographystyle{ieee}
+\bibliography{egbib}
+}
+
+\end{document}
+\section{Conclusion}
+
+{\small
+\bibliographystyle{ieee}
+\bibliography{egbib}
+}
+
+\end{document}

@@ -1,0 +1,148 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage{cvpr}
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Include other packages here, before hyperref.
+
+% If you comment hyperref and then uncomment it, you should delete
+% egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
+% run, let it finish, and you should be clear).
+\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref}
+
+% \cvprfinalcopy % *** Uncomment this line for the final submission
+
+\def\cvprPaperID{****} % *** Enter the CVPR Paper ID here
+\def\httilde{\mbox{\tt\raisebox{-.5ex}{\symbol{126}}}}
+
+% Pages are numbered in submission mode, and unnumbered in camera-ready
+\ifcvprfinal\pagestyle{empty}\fi
+\begin{document}
+
+%%%%%%%%% TITLE
+\title{Beyond fine-grained classification: using fine-grain detection to understad society}
+
+\author{First Author\\
+Institution1\\
+Institution1 address\\
+{\tt\small firstauthor@i1.org}
+% For a paper whose authors are all at the same institution,
+% omit the following lines up until the closing ``}''.
+% Additional authors and addresses can be added with ``\and'',
+% just like the second author.
+% To save space, use either the email address or home page, not both
+\and
+Second Author\\
+Institution2\\
+First line of institution2 address\\
+{\tt\small secondauthor@i2.org}
+}
+
+\maketitle
+%\thispagestyle{empty}
+
+%%%%%%%%% ABSTRACT
+\begin{abstract}
+Detecting a large number of BMWs in images informs us that those images may be of a wealthy area. Conversely,knowing that our images were obtained from a wealthy neighborhood increases the likelihood of detecting expensive cars. We explore this relationship between demographic factors and fine-grain classes by performing large scale detection of over 2600 car classes and conducting a social analysis of unprecedented scale in computer vision. Using 45 million images from 200 of the biggest cities in the United States,we predict demographic factors such as neighborhood wealth and crime statistics. In addition to showing high correlation with census data, we gain interesting insights regarding the relationship between different fine-grain classes and neighborhood statistics. Finally we show that just as fine-grain classes provide demographic infromation, societal cues can assist in fine-grain classification and improve accuracy. To facilitate our work, we have collected the largest and most challenging fine-grain dataset reported to date consisting of 3147 classes of cars comprised of images from google streetview and other web sources and classified by car experts to account for even the most subtle of visual differences. We hope our work ushers in a new research area fusing fine-grained object detection and societal analysis.
+\end{abstract}
+
+\section{Introduction}
+%%%%%%%%% BODY TEXT
+The ubiquity of streetview images has jumpstarted a new line of computer vision work focused on understanding cities through images \cite{mit_plos_1}~\cite{MIT_vision}~\cite{tamara}. For example, Hedalgo et al show that city crime predictions can be improved by incorporating human perceptions of images of neighborhoods rather than using census data such as income alone~\cite{mit_plos_1} and Tamara's guy et al. and MIT people learn these perceptions purely using computer vision techniques. However, in order to extend these methods to other cities.  We explore the question of learning social priors using large scale fine-grain classifications of cars and show that many neighborhood statistics such as income and crime rate can be predicted from car detections. 
+
+
+Which set of images in Fig.~\ref{fig:pull} come from one of the wealthiest zipcodes in the US and which ones from one of the poorest? 
+
+Finally,although an increasing number of images that we interact with daily are associated with GPS tags, there are very few computer vision algorithms that take advantage of location based metadata. This metadata can be especially important in fine grain classification. For example, just as detecting a large number of expensive cars in one area can give us a hint that we are in the vicinity of a wealthy neighborhood, knowing that we are in a wealthy neighborhood can also increase our likelyhood of detecting expensive cars. Similarly, knowing that we are in a farm area increases our liklihood of detecting farm related cars and seeing many family households with young children increases our likelihood of detecting SUVs. We show that this information can be leveraged to improve fine-grain classification. Although there has been previous work on learning spatio-temporal priors for fine-grain classification~\cite{birdsnap} and exploiting streetview geometry and GIS systems to improve object detection~\cite{nyc3D,amir} to our knowledge this is the first time census data and other social cues have been used to assist in fine-grain classification.  
+
+\begin{figure}[t]
+\begin{center}
+\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
+   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
+\end{center}
+   \caption{Example of caption.  It is set in Roman so that mathematics
+   (always set in Roman: $B \sin A = A \sin B$) may be included without an
+   ugly clash.}
+\label{fig:pull}
+%\label{fig:onecol}
+\end{figure}
+ 
+
+
+Summarizing our contributions:
+  \begin{enumerate}
+    \item We perform a large scale analysis of cities using our car detections and present intuitive as well as interesting insights
+    \item We show that using social cues extracted from census data can improve fine-grain classificaiton accuracy
+    \item We present the largest fine-grain car dataset reported to our knowledge, complete with geotags and class as well as geography metadata  
+    \item We include a larger set of 45 million streetview images with car detections and fine-grain class predictions
+  \end{enumerate}
+
+%-------------------------------------------------------------------------
+\begin{figure*}
+\begin{center}
+\fbox{\rule{0pt}{2in} \rule{.9\linewidth}{0pt}}
+\end{center}
+   \caption{Example of a short caption, which should be centered.}
+\label{fig:short}
+\end{figure*}
+
+%------------------------------------------------------------------------
+\section{Related Work}
+\textbf{Using GPS data to improve object detection.}
+  \begin{enumerate}
+     \item Amir's work in GIS assisted object detections. For objects like streetlamps and trashcans, uses GIS to reproject objects to a plane and reduce the search space for object detection .
+     \item NYC 3D uses geographic elevation data to create view-point aware detectors and extract ground planes for  them
+
+\textbf{Analysis of cities using images.}
+     \item Plos one journal from MIT asking people to predict whether an area is safe/wealthy etc... after looking at the images
+     \item streetscore MIT paper predicting safety wealth scores etc.. just from images~\cite{MIT_vision}
+     \item tamara Berg's paper on safety on ECCV
+     ~\cite{zhang2014part}
+     ~\cite{caltech_birds}
+  \end{enumerate}
+
+%------------------------------------------------------------------------
+\section{Cars and Cities dataset}
+Briefly describe the dataset here
+\begin{enumerate}
+  \item example images to show how challenging it is
+  \item show stats
+  \item number of bboxes per image
+  \item distribution of objects accros image
+  \item graph of number of samples per make etc...
+\end{enumerate}
+
+\section{Training detection and classificatoin}
+  
+\section{Societal analysis and Boston results}
+  \begin{enumerate} 
+    \item talk about how to add social cues
+    \item show correlation matrix of cheap/vs expensive cars
+    \item show mututal information between some census data
+   and some car attributes (e.g. income vs car price)
+    \item do some basian multiplication to use those features 
+   as a prior
+    \item learn an adaptive kernel (like birdsnap?)
+    \item do something more complicated
+  \end{enumerate}
+
+\section{Using social cues to improve detection}
+  \begin{enumerate}
+    \item take one analysis of one city from science 
+    \item show plots visualization
+    \item use income prior learned from data to improve fg-classification
+    \item maybe its as good as using census data
+  \end{enumerate}
+
+\section{Conclusion}
+
+{\small
+\bibliographystyle{ieee}
+\bibliography{egbib}
+}
+
+\end{document}

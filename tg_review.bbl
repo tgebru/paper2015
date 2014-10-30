@@ -1,0 +1,48 @@
+\begin{thebibliography}{1}\itemsep=-1pt
+
+\bibitem{amir}
+S.~Ardeshir, A.~R. Zamir, A.~Torroella, and M.~Shah.
+\newblock Gis-assisted object detection and geospatial localization.
+\newblock In {\em Computer Vision--ECCV 2014}, pages 602--617. Springer, 2014.
+
+\bibitem{birdsnap}
+T.~Berg, J.~Liu, S.~W. Lee, M.~L. Alexander, D.~W. Jacobs, and P.~N. Belhumeur.
+\newblock Birdsnap: Large-scale fine-grained visual categorization of birds.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2014 IEEE
+  Conference on}, pages 2019--2026. IEEE, 2014.
+
+\bibitem{nyc3D}
+K.~Matzen and N.~Snavely.
+\newblock Nyc3dcars: A dataset of 3d vehicles in geographic context.
+\newblock In {\em Computer Vision (ICCV), 2013 IEEE International Conference
+  on}, pages 761--768. IEEE, 2013.
+
+\bibitem{MIT_vision}
+N.~Naik, J.~Philipoom, R.~Raskar, and C.~Hidalgo.
+\newblock Streetscore--predicting the perceived safety of one million
+  streetscapes.
+\newblock In {\em Computer Vision and Pattern Recognition Workshops (CVPRW),
+  2014 IEEE Conference on}, pages 793--799. IEEE, 2014.
+
+\bibitem{tamara}
+V.~Ordonez and T.~L. Berg.
+\newblock Learning high-level judgments of urban perception.
+\newblock In {\em Computer Vision--ECCV 2014}, pages 494--510. Springer, 2014.
+
+\bibitem{mit_plos_1}
+P.~Salesses, K.~Schechtner, and C.~A. Hidalgo.
+\newblock The collaborative image of the city: mapping the inequality of urban
+  perception.
+\newblock {\em PloS one}, 8(7):e68400, 2013.
+
+\bibitem{caltech_birds}
+C.~Wah, S.~Branson, P.~Welinder, P.~Perona, and S.~Belongie.
+\newblock The caltech-ucsd birds-200-2011 dataset.
+\newblock 2011.
+
+\bibitem{zhang2014part}
+N.~Zhang, J.~Donahue, R.~Girshick, and T.~Darrell.
+\newblock Part-based r-cnns for fine-grained category detection.
+\newblock In {\em Computer Vision--ECCV 2014}, pages 834--849. Springer, 2014.
+
+\end{thebibliography}

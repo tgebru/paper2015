@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.6)
+The top-level auxiliary file: tg_review.aux
+The style file: ieee.bst
+Database file #1: egbib.bib
+Warning--empty journal in caltech_birds
+You've used 8 entries,
+            2120 wiz_defined-function locations,
+            545 strings with 5228 characters,
+and the built_in function-call counts, 3840 in all, are:
+= -- 397
+> -- 174
+< -- 6
++ -- 70
+- -- 60
+* -- 253
+:= -- 580
+add.period$ -- 30
+call.type$ -- 8
+change.case$ -- 54
+chr.to.int$ -- 0
+cite$ -- 9
+duplicate$ -- 164
+empty$ -- 293
+format.name$ -- 60
+if$ -- 858
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 8
+newline$ -- 43
+num.names$ -- 16
+pop$ -- 72
+preamble$ -- 1
+purify$ -- 46
+quote$ -- 0
+skip$ -- 127
+stack$ -- 0
+substring$ -- 260
+swap$ -- 66
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 32
+warning$ -- 1
+while$ -- 35
+width$ -- 9
+write$ -- 94
+(There was 1 warning)
