@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2014.1.20)  30 OCT 2014 13:20
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2014.1.20)  31 OCT 2014 11:58
 entering extended mode
  %&-line parsing enabled.
 **tg_review.tex
@@ -281,7 +281,10 @@ Underfull \hbox (badness 3049) in paragraph at lines 120--121
 \OT1/ptm/m/n/10 and bound-ing boxes, X were ob-tained from google
  []
 
-[2]
+
+Underfull \vbox (badness 3954) has occurred while \output is active []
+
+ [2]
 
 LaTeX Warning: Citation `rcnn' on page 3 undefined on input line 188.
 
@@ -299,52 +302,9 @@ LaTeX Warning: Citation `caffe' on page 3 undefined on input line 202.
 
 [3]
 
-LaTeX Warning: Reference `section:Societal analysis' on page 4 undefined on inp
-ut line 238.
+LaTeX Warning: File `img/averagePriceIncome.png' not found on input line 227.
 
 
-LaTeX Warning: Reference `fig:price-acc' on page 4 undefined on input line 244.
-
-
-(./tg_review.bbl (./tg_review.brf)
-\tf@brf=\write3
-\openout3 = `tg_review.brf'.
-
-
-Underfull \vbox (badness 2521) has occurred while \output is active []
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
- [4]
-Underfull \hbox (badness 4492) in paragraph at lines 26--26
-[]\OT1/ptm/m/n/9 N. Naik, J. Philipoom, R. Raskar, and C. Hi-dalgo.
- []
-
-) [5] (./tg_review.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
-Here is how much of TeX's memory you used:
- 3896 strings out of 256216
- 50802 string characters out of 1917072
- 116123 words of memory out of 1500000
- 7059 multiletter control sequences out of 10000+200000
- 32496 words of font info for 72 fonts, out of 1200000 for 2000
- 645 hyphenation exceptions out of 8191
- 35i,9n,25p,1362b,457s stack positions out of 5000i,500n,6000p,200000b,15000s
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/b
-luesky/cm/cmmi9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr9.pfb></usr/sha
-re/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/urw/
-helvetic/uhvr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/sh
-are/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/ti
-mes/utmri8a.pfb>
-Output written on tg_review.pdf (5 pages, 102098 bytes).
-PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 131072)
- 17 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+!pdfTeX error: pdflatex (file img/averagePriceIncome.png): cannot find image fi
+le
+ ==> Fatal error occurred, no output PDF file produced!
