@@ -218,9 +218,11 @@ Ours & Makes one's heart Frob\\
 \end{table}
 
 \section{Societal analysis}
+\label{sec:social}
 After collecting data, training fine-grained car detectors and classifying cars in all of our images, we are now ready to perform some social analysis. We show some general results from the entire united states as well as a case study from Massachussettes.
 
-We gathered zipcode level 2007-2012 American Community Survey data for the 200 cities in our dataset and analysized how the census data relates to statistics from our detected cars. Fig.~\ref{fig:corrs} A shows some of the results of our analysis.As expected, median household income is highly correlated with the average car price per zipcode (Pearson correlation 0.493, P-value of T-Test $<< 0.001$). Starting from the median household income and the average car price per zipcode, we did more analyses between our detected car data and the census data with some interesting societal findings described in the rest of this section.
+We gathered zipcode level as well as census tract level 2007-2012 American Community Survey data for the 200 cities in our dataset and analyzed how the census data relates to statistics from our detected cars. As shown in fig.~\ref{fig:corrs}, median household income is highly correlated with the average price of cars in a given zip code (Pearson correlation 0.493, P-value of T-Test \(<< 0.001\). The correlation coefficient varies city by city from 0.8 for city XXXX to 0.4 for city YYY. 
+
 \begin{figure}[t]
 \begin{center}
 %\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
@@ -232,12 +234,10 @@ We gathered zipcode level 2007-2012 American Community Survey data for the 200 c
 \end{figure}
 
 \subsection{What do poor people drive and what do rich people drive?}
-From the median household income, we want to ask what do poor people drive and what do rich people drive? How can difference in income affect peoples preference in cars? We answer this question from two dimensions, countries of cars and years of cars.
+We found a strong positive correlation (Pearson Correlation 0.592, P-value of T-Test \(<< 0.001\) between the percentage of cars made outside of the United States and the median household income per zip code. As shown in Figure \ref{fig:cartoincome} (A), rich people seem to drive German cars (Pearson correlation 0.57) where as there is a surprising strong negative correlation of -0.59 between the number of American cars per zip code and median household income even though the number of American cars in our dataset is higher than the number of German cars. 
 
-We found a strong positive correlation (Pearson Correlation 0.592, P-value of T-Test $<< 0.001$) between the percentage of foreign cars in a zipcode and the median household income. Specifically, as in Figure \ref{fig:cartoincome} (A), the percentage of German cars and Japanese cars in every zipcode has a positive correlation with the median household income, which means rich people more prefer to drive German and Japanese cars than poor people. However, the percentage of American cars has a negative value with the median household income even though the percentage of American cars are higher than German and Japanese cars. The average median household income of zipcodes with less than 60\% American cars is \$???? while that of zipcodes with more than 60\% is \$????. Rich people more prefer foreign cars than poor people.
-
-We use the listing year of cars to represent years of cars and divide 20 years (1990-2009) into 4 bins to study the correlation between each bin and median household income. Please note we remove cars in 2010-2015 since data for 2014 and 2015 is incomplete. As in Figure \ref{fig:cartoincome} (B), the correlation is increased from -0.421 in 1990-1994 to 0.466 in 2005-2009. Specifically, for time bin 1990-1994 and 1995-1999 the correlations between year of cars and median house income are negative. Rich people tends to replace their old cars while poor people often stick to their cars which are used over ten years. Morever, percentage of cars in 2000-2004 shows a weak positive correlation with income whereas cars in 2005-2009 has a much stronger positive correlation with income. This demonstrates that rich people are more affordable to buy a new car and they update their cars more frequently than poor people.
-
+Not surprisingly, rich people also dirve newer cars. Figure \ref{fig:cartoincome} B shows the correlations between the number of cars in different year bins vs. median household income. Starting with a strong negative correlation of -0.4 between the number of cars from 1990-1994 in a given zipcode and median household income, the correlation keeps on increasing for newer cars reaching a small positive value for cars in 2000-2004 and a maximum value of 0.46 for cars in 2000-2013. 
+ 
 
 \begin{figure}[t]
 \begin{center}
@@ -245,18 +245,21 @@ We use the listing year of cars to represent years of cars and divide 20 years (
     \includegraphics[width=0.3\linewidth]{img/germanyIncome.png}
     \includegraphics[width=0.3\linewidth]{img/japanIncome.png}
     \includegraphics[width=0.3\linewidth]{img/usaIncome.png}
-    \includegraphics[width=0.23\linewidth]{img/years1990-1994Income.png}
-    \includegraphics[width=0.23\linewidth]{img/years1995-1999Income.png}
-    \includegraphics[width=0.23\linewidth]{img/years2000-2004Income.png}
-    \includegraphics[width=0.23\linewidth]{img/years2005-2009Income.png}  
+    \includegraphics[width=0.3\linewidth]{img/years1990-1994Income.png}
+    \includegraphics[width=0.3\linewidth]{img/years1995-1999Income.png}
+    \includegraphics[width=0.3\linewidth]{img/years2000-2004Income.png}
+    \includegraphics[width=0.3\linewidth]{img/years2005-2009Income.png}  
+    \includegraphics[width=0.3\linewidth]{img/years2009-2013Income.png}  
+    \includegraphics[width=0.3\linewidth]{img/mpg_cityIncome.png}  
 \end{center}
-   \caption {(A) Countries of cars w.r.t. median household income, (B) years of cars w.r.t. median household income}
+   \caption {(A) Countries of cars vs. median household income, (B) years of cars vs. median household income, (C) years of cars vs. median household income, last column is avg. city MPG vs. median household income}
 \label{fig:cartoincome}
 %\label{fig:onecol}
 \end{figure}
 
-\subsection{Who drives expensive car and who drives cheap car}
-We study average car price per zipcode against the education level of people. As shown in the left plot of Figure \ref{fig:pricetoedu}, the number of high school graduate exhibits negative correlation of -0.211 with the car price. However, the number of people with bachelor degree shows a positive correlation of 0.319 and the number of grad school graduate demonstrates a positive correlation of 0.391. It is common that people with higher education drives more expensive cars. But surprisingly, the change from bachelor to graduate is subtle compare to that from high school to bachelor.
+Finally,as shown in ~\ref{fig:cartoincome} C poor people live in zipcodes with cars that have low mileage while rich people live in zipcodes having cars with high MPG. As shown in ~\cite{pollution_race_ca} poor people are exposed to higher levels of pollution because they live near areas with higher traffic levels and cars with high C02 emissions. Finally Figure \ref{fig:pricetoedu}, shows the relationship between education and the average car price of detected cars in a zipcode. There is a moderate negative correlation of -0.211 between highschool educated people and the price of the car in their zipcode as opposed to a positive correlation of 0.319 between the number of graduate school educated people in a zipcode vs. the average car price. As expected, the jump in correlation coefficient from high school educated to college educated (-0.21 to 0.32) is higher than the jump from college educated to graduate school educated (0.32-0.39). Although we have found many interesting results, we will cover them in the supplemental material for the sake of brevety.
+
+
 \begin{figure}[t]
 \begin{center}
 %\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
@@ -264,13 +267,17 @@ We study average car price per zipcode against the education level of people. As
     \includegraphics[width=0.3\linewidth]{img/averagePriceBachelor.png}
     \includegraphics[width=0.3\linewidth]{img/averagePriceGradSchool.png} 
 \end{center}
-   \caption {Number of people with different education level w.r.t. average car price per zipcode}
+   \caption {Number of people with different education level vs. average car price per zipcode}
 \label{fig:pricetoedu}
 %\label{fig:onecol}
 \end{figure}
 
-\subsection{Learn about neighboorhoods using car detection}
-The results of our fine-grained car detection can be used to learning about the neighboorhoods. Cars parked on the street no only tell us sample level information like car price, make, submodel, etc., but also give a whole picture when aggregated at zipcode level. For example, as we showed the correlation between zipcode level average car price and median household income, we can understand the income situation in a zipcode using aggregated average car price from our car detection results in streetview images. In Figure \ref{fig:bosvis}, we show a heatmap of zipcode level avarage car price and ground truth median household income. The high income zipcodes are correctly predicted using aggregated car price, where the same east boston zipcode region (02128) with highest income has the highest average car price. Without sophisticated census data collection, our approach uses computer vision to percept and understand the neighboorhoods.
+\subsection{Which neighborhoods are wealthy/poor?}
+We found that the results of our fine-grained car detections can be used to learn various attributes of neighborhoods. Intuitively, if we see many expensive cars on the street, we suspect that we are in a rich neighborhood and viceversa. However, the correlation between car prices and neighborhood wealth is not going to be perfect because we are not necessarily detecting the cars that residents drive. Figure \ref{fig:bosvis} shows a heatmap of the average price of detected cars within a zipcode and median household income in a zipcode. We can see that just by looking at the average price of cars within a zipcode we can correctly predict most of the high and low income zipcodes. We show these viusalizations for all 200 cities in our supplemental material and only present two cities here.
+
+
+\subsection{Which cities are more segregated?}
+Following the analysis of~\cite{mit_plos_1} we use Getis Gi* statistic to produce statistically significant clusters of expensive and cheap cars and use Moran's I statistic ~\cite{moran} to measure the spatial seggregation of car price with values ranging from -1 to 1. A value of -1 indicates perfect anti-correlation like a checkerboard where as a value of 1 indicates that similar values are perfectly clustered. The null hypothesis of complete spatial randomness produces values near 0. After creating a z-score for Moran's statistic we see that Boston, for example has a higher z-score than **XXX** showing that Boston has more seggreaged neighborhoods than **XXX**. After measuring the length of the spatial autocorrelation function of the average car price per zipcode and calculating the correlation length, we find that *XXXX* is found to be the city with the highest correlation length, and therefore the city with the most seggregated neighborhoods by income which is corroborated by census data ~\cite{census-segreggation}. Fig. ~\ref{fig:boston-hotspot}A shows statistically significant clusters of high and low car prices in Boston and Fig.~\ref{fig:autocorr} shows spatial correlograms for 5 cities displaying the decay of spatial autocorrelation as a function of distance.
 
 \begin{figure}[t]
 \begin{center}
@@ -284,26 +291,39 @@ The results of our fine-grained car detection can be used to learning about the 
 %\label{fig:onecol}
 \end{figure}
 
+
+\begin{figure}[t]
+\begin{center}
+%\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
+
+    \includegraphics[width=0.45\linewidth]{img/boston-hotspot.png}
+    \includegraphics[width=0.45\linewidth]{img/autocorr.png}
+\end{center}
+   \caption {(A)  Map of Boston showing statistically significant clusters of high -and low- car parices according to Getis Gi* statistic. Red shows clusters of high prices and orange shows clusters of low prices. (B) Spatial correlograms showing the decay of spatial autocorrelation as a function of distance.}
+\label{fig:boston-hotspot}
+%\label{fig:onecol}
+\end{figure}
+
 \section{Using social priors to improve classification}
-As shown in section ~\ref{section:Societal analysis} there is a very high correlation between some census variables such as income, and car attributes such as price and year. Given this relationship, we explore the use of census data to improve our fine-grain classification.
+
+As shown in section ~\ref{sec:social} there is a very high correlation between some census variables such as income, and car attributes such as price and year. Given this relationship, we explore the use of census data to improve our fine-grain classification.
 \subsection{Analysing classification accuracy}
-Although we are classifying 2657 classes,it is important to know whether our classification errors are between highly similar or dissimilar classes. Fig. ~\ref{fig:fg-hierarchy} shows one of a few possible hierarchies of car classes. As shown in Fig. ~\ref{fig:percent-error}, most of the errors are lower in the hierarchy and are at the level of trims and years.  
+Although we are classifying 2657 classes,it is important to know whether our classification errors are between highly similar or dissimilar classes. Fig. ~\ref{fig:fg-hierarchy} A shows one of a few possible hierarchies of car classes. As shown in Fig. ~\ref{fig:fg-hierarchy} B, most of the errors are lower in the hierarchy and are at the level of trims and years.  
 
 Since census data is most highly correlated with aggregate car attributes, one question is how much knowing ground truth car attributes would help in classification accuracy. Table~\ref{table:car-att} lists the classification accuracy after using ground truth car attributes. Surprisingly, knowing the manufactured country of the car gives very little gain in accuracy (~0.5\%). However, localizing the car price within one of two bins of expensive vs cheap cars provides a gain in accruacy of ~3\%. Looking at the confusion matricies in fig. ~\ref{fig:fg-confusion} we can see that after dividing the price into 5 bins using quantiles some expensive cars are confused with cheap cars where as most car countries of origin are not confused with other countries, except for one case of confusion between South Korean and Japanese cars. 
 
 We take this experiment further and plot accuracy Vs. price bin in fig.~\ref{fig:price-acc} for various numbers of price bins, all generated using quantiles,localized to various degrees of accuracy. For example, we can see that if we localize the price of the car to one of 4 bins we would get an 8\% increase in classification accuracy. However, even localizing the price to within 3 out of those 4 bins would result in a ~1\% increase.
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \begin{center}
-\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
-   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
+   \includegraphics[width=0.4\linewidth]{img/fg-hierarchy.png}
+   \hspace{0.1\linewidth}
+   \includegraphics[width=0.4\linewidth]{img/percent-error.png}
 \end{center}
-   \caption{Example of caption.  It is set in Roman so that mathematics
-   (always set in Roman: $B \sin A = A \sin B$) may be included without an
-   ugly clash.}
-\label{fig:percent-error}
+   \caption{(A) Hierarchy of car classes. Images of cars become increasingly visually similar while travleing down the tree (B) Percentage of Error at each level of the hierarchy: for example trim/year error shows the percentage of errors that only occur at the trim year level (and classify make, model and submodel accurately)} 
+\label{fig*:fg-hierarchy}
 %\label{fig:onecol}
-\end{figure}
+\end{figure*}
 
 \begin{table}
 \begin{center}
@@ -317,32 +337,16 @@ Ours & Makes one's heart Frob\\
 \hline
 \end{tabular}
 \end{center}
-\caption{Results.Ours is better.}
+\caption{Classification accuracy with ground truth attributes}
 \label{table:car-att}
 \end{table}
 
 \begin{figure}[t]
 \begin{center}
-\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
-   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
+\includegraphics[width=0.9\linewidth]{img/price-att.png}
 \end{center}
-   \caption{Example of caption.  It is set in Roman so that mathematics
-   (always set in Roman: $B \sin A = A \sin B$) may be included without an
-   ugly clash.}
-\label{fig:fg-hierarchy}
-%\label{fig:onecol}
-\end{figure}
-
-\begin{figure}[t]
-\begin{center}
-\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
-   %\includegraphics[width=0.8\linewidth]{egfigure.eps}
-\end{center}
-   \caption{Example of caption.  It is set in Roman so that mathematics
-   (always set in Roman: $B \sin A = A \sin B$) may be included without an
-   ugly clash.}
-\label{fig:fg-confusion}
-%\label{fig:onecol}
+   \caption{Fine-grain classification accuracy with ground truth price bin. X axis is the number of bins to which the price is localized and Y axis is classification accuracy. For example, localizing the price to 3 out of 8 bins results in a classification accuracy of 33\% which is 2\% higher than the baseline, 31.27\%}
+\label{fig:price-acc}
 \end{figure}
 
 \subsection{Using census priors to predict attributes}
@@ -421,7 +425,6 @@ Ours & Makes one's heart Frob\\
 }
 
 \end{document}
-\section{Conclusion}
 
 {\small
 \bibliographystyle{ieee}
