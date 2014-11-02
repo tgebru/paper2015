@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2014.1.20)  31 OCT 2014 20:49
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2014.1.20)  1 NOV 2014 23:18
 entering extended mode
  %&-line parsing enabled.
 **tg_review.tex
@@ -267,6 +267,9 @@ File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
+
+Underfull \vbox (badness 5203) has occurred while \output is active []
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 70.
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 70.
@@ -281,10 +284,7 @@ Underfull \hbox (badness 3049) in paragraph at lines 120--121
 \OT1/ptm/m/n/10 and bound-ing boxes, X were ob-tained from google
  []
 
-
-Underfull \vbox (badness 3954) has occurred while \output is active []
-
- [2]
+[2]
 
 LaTeX Warning: Citation `rcnn' on page 3 undefined on input line 188.
 
@@ -300,40 +300,44 @@ LaTeX Warning: Citation `alexnet' on page 3 undefined on input line 202.
 
 LaTeX Warning: Citation `caffe' on page 3 undefined on input line 202.
 
-[3] <img/averagePriceIncome.png, id=76, 481.8pt x 361.35pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+<img/averagePriceIncome.png, id=80, 481.8pt x 361.35pt>
 File: img/averagePriceIncome.png Graphic file (type png)
 
 <use img/averagePriceIncome.png>
-<img/germanyIncome.png, id=79, 481.8pt x 361.35pt>
+<img/germanyIncome.png, id=83, 481.8pt x 361.35pt>
 File: img/germanyIncome.png Graphic file (type png)
  <use img/germanyIncome.png>
-<img/japanIncome.png, id=80, 481.8pt x 361.35pt>
+<img/japanIncome.png, id=84, 481.8pt x 361.35pt>
 File: img/japanIncome.png Graphic file (type png)
  <use img/japanIncome.png>
-<img/usaIncome.png, id=81, 481.8pt x 361.35pt>
+<img/usaIncome.png, id=85, 481.8pt x 361.35pt>
 File: img/usaIncome.png Graphic file (type png)
  <use img/usaIncome.png>
-<img/years1990-1994Income.png, id=82, 481.8pt x 361.35pt>
+<img/years1990-1994Income.png, id=86, 481.8pt x 361.35pt>
 File: img/years1990-1994Income.png Graphic file (type png)
 
 <use img/years1990-1994Income.png>
-<img/years1995-1999Income.png, id=83, 481.8pt x 361.35pt>
+<img/years1995-1999Income.png, id=87, 481.8pt x 361.35pt>
 File: img/years1995-1999Income.png Graphic file (type png)
 
 <use img/years1995-1999Income.png>
-<img/years2000-2004Income.png, id=84, 481.8pt x 361.35pt>
+<img/years2000-2004Income.png, id=88, 481.8pt x 361.35pt>
 File: img/years2000-2004Income.png Graphic file (type png)
 
 <use img/years2000-2004Income.png>
-<img/years2005-2009Income.png, id=85, 481.8pt x 361.35pt>
+<img/years2005-2009Income.png, id=89, 481.8pt x 361.35pt>
 File: img/years2005-2009Income.png Graphic file (type png)
 
 <use img/years2005-2009Income.png>
-<img/years2009-2013Income.png, id=86, 481.8pt x 361.35pt>
+<img/years2009-2013Income.png, id=90, 481.8pt x 361.35pt>
 File: img/years2009-2013Income.png Graphic file (type png)
 
 <use img/years2009-2013Income.png>
-<img/mpg_cityIncome.png, id=87, 481.8pt x 361.35pt>
+<img/mpg_cityIncome.png, id=91, 481.8pt x 361.35pt>
 File: img/mpg_cityIncome.png Graphic file (type png)
 
 <use img/mpg_cityIncome.png>
@@ -346,15 +350,15 @@ LaTeX Warning: Citation `pollution_race_ca' on page 4 undefined on input line 2
 ears1990-1994Income.png (PNG copy)> <./img/years1995-1999Income.png (PNG copy)>
  <./img/years2000-2004Income.png (PNG copy)> <./img/years2005-2009Income.png (P
 NG copy)> <./img/years2009-2013Income.png (PNG copy)> <./img/mpg_cityIncome.png
- (PNG copy)>] <img/averagePriceHighSchool.png, id=110, 481.8pt x 361.35pt>
+ (PNG copy)>] <img/averagePriceHighSchool.png, id=115, 481.8pt x 361.35pt>
 File: img/averagePriceHighSchool.png Graphic file (type png)
 
 <use img/averagePriceHighSchool.png>
-<img/averagePriceBachelor.png, id=111, 481.8pt x 361.35pt>
+<img/averagePriceBachelor.png, id=116, 481.8pt x 361.35pt>
 File: img/averagePriceBachelor.png Graphic file (type png)
 
 <use img/averagePriceBachelor.png>
-<img/averagePriceGradSchool.png, id=112, 481.8pt x 361.35pt>
+<img/averagePriceGradSchool.png, id=117, 481.8pt x 361.35pt>
 File: img/averagePriceGradSchool.png Graphic file (type png)
 
 <use img/averagePriceGradSchool.png>
@@ -368,64 +372,46 @@ LaTeX Warning: Citation `census-segreggation' on page 5 undefined on input line
 
 LaTeX Warning: Reference `fig:autocorr' on page 5 undefined on input line 280.
 
-<img/price.png, id=116, 662.475pt x 733.99219pt>
+<img/price.png, id=121, 662.475pt x 733.99219pt>
 File: img/price.png Graphic file (type png)
  <use img/price.png>
-<img/income.png, id=117, 657.95813pt x 733.99219pt>
+<img/income.png, id=122, 657.95813pt x 733.99219pt>
 File: img/income.png Graphic file (type png)
  <use img/income.png>
-<img/boston-hotspot.png, id=118, 500.87125pt x 518.93875pt>
+<img/boston-hotspot.png, id=123, 500.87125pt x 518.93875pt>
 File: img/boston-hotspot.png Graphic file (type png)
 
 <use img/boston-hotspot.png>
-<img/autocorr.png, id=119, 567.11874pt x 438.63875pt>
+<img/autocorr.png, id=124, 567.11874pt x 438.63875pt>
 File: img/autocorr.png Graphic file (type png)
  <use img/autocorr.png>
-
-LaTeX Warning: Reference `fig:fg-confusion' on page 5 undefined on input line 3
-13.
-
 [5 <./img/averagePriceHighSchool.png (PNG copy)> <./img/averagePriceBachelor.pn
 g (PNG copy)> <./img/averagePriceGradSchool.png (PNG copy)> <./img/price.png (P
 NG copy)> <./img/income.png (PNG copy)> <./img/boston-hotspot.png (PNG copy)> <
 ./img/autocorr.png (PNG copy)>]
-<img/fg-hierarchy.png, id=140, 925.4575pt x 432.61626pt>
-File: img/fg-hierarchy.png Graphic file (type png)
+<img/confusion_price5.png, id=144, 912.40875pt x 681.54625pt>
+File: img/confusion_price5.png Graphic file (type png)
 
-<use img/fg-hierarchy.png>
-<img/percent-error.png, id=141, 766.865pt x 463.7325pt>
-File: img/percent-error.png Graphic file (type png)
+<use img/confusion_price5.png>
+<img/confusion_country.png, id=145, 808.01875pt x 585.18625pt>
+File: img/confusion_country.png Graphic file (type png)
 
-<use img/percent-error.png>
-<img/price-att.png, id=142, 636.3775pt x 673.51625pt>
+<use img/confusion_country.png>
+<img/price-att.png, id=147, 636.3775pt x 673.51625pt>
 File: img/price-att.png Graphic file (type png)
  <use img/price-att.png>
 
 LaTeX Warning: Citation `Other context stuff' on page 6 undefined on input line
- 353.
-
-
-LaTeX Warning: Reference `equation:prior-eq' on page 6 undefined on input line 
-370.
-
-
-LaTeX Warning: Reference `equation:prior-eq' on page 6 undefined on input line 
-371.
-
-
-LaTeX Warning: Reference `equation:prior-eq' on page 6 undefined on input line 
-371.
-
-
-LaTeX Warning: Reference `section:Societal analysis' on page 6 undefined on inp
-ut line 376.
+ 351.
 
 [6 <./img/price-att.png>]
-Underfull \hbox (badness 2707) in paragraph at lines 396--397
-[]\OT1/ptm/m/n/10 We also make one more as-sump-tion that car at-
- []
-
-(./tg_review.bbl (./tg_review.brf)
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+ (./tg_review.bbl (./tg_review.brf)
 \tf@brf=\write3
 \openout3 = `tg_review.brf'.
 
@@ -434,11 +420,7 @@ Underfull \hbox (badness 4492) in paragraph at lines 26--26
 []\OT1/ptm/m/n/9 N. Naik, J. Philipoom, R. Raskar, and C. Hi-dalgo.
  []
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 42.
-[7 <./img/fg-hierarchy.png (PNG copy)> <./img/percent-error.png>]) [8
-
-]
+) [7 <./img/confusion_price5.png> <./img/confusion_country.png>]
 (./tg_review.aux)
 
 LaTeX Warning: There were undefined references.
@@ -448,13 +430,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4052 strings out of 256216
- 54196 string characters out of 1917072
- 117170 words of memory out of 1500000
- 7173 multiletter control sequences out of 10000+200000
- 32496 words of font info for 72 fonts, out of 1200000 for 2000
+ 4046 strings out of 256216
+ 54135 string characters out of 1917072
+ 116102 words of memory out of 1500000
+ 7168 multiletter control sequences out of 10000+200000
+ 31977 words of font info for 71 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 35i,9n,25p,1326b,455s stack positions out of 5000i,500n,6000p,200000b,15000s
+ 32i,9n,25p,1326b,336s stack positions out of 5000i,500n,6000p,200000b,15000s
 {/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/b
 luesky/cm/cmex10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi10.pfb></usr/
 share/texmf/fonts/type1/bluesky/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/blue
@@ -465,9 +447,9 @@ sky/cm/cmmi9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/share
 /uhvr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/share/texm
 f/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on tg_review.pdf (8 pages, 2767498 bytes).
+Output written on tg_review.pdf (7 pages, 2738226 bytes).
 PDF statistics:
- 250 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 131072)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 68 named destinations out of 1000 (max. 131072)
  117 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -24,7 +24,7 @@
 \begin{document}
 
 %%%%%%%%% TITLE
-\title{Beyond fine-grained classification: Using fine-grain detection to understad society}
+\title{Using fine-grain detection to understad society}
 
 \author{First Author\\
 Institution1\\
@@ -47,12 +47,12 @@ First line of institution2 address\\
 
 %%%%%%%%% ABSTRACT
 \begin{abstract}
-Detecting a large number of BMWs in images informs us that those images may be of a wealthy area. Conversely,knowing that our images were obtained from a wealthy neighborhood increases the likelihood of detecting expensive cars. We explore this relationship between demographic factors and fine-grain classes by performing large scale detection of over 2600 car classes and conducting a social analysis of unprecedented scale in computer vision. Using 45 million images from 200 of the biggest cities in the United States,we predict demographic factors such as neighborhood wealth and crime statistics. Finally we show that just as fine-grain classes provide demographic infromation, societal cues can assist in fine-grain classification and improve accuracy. To facilitate our work, we have collected the largest and most challenging fine-grain dataset reported to date consisting of 3147 classes of cars comprised of images from google streetview and other web sources and classified by car experts to account for even the most subtle of visual differences. We hope our work ushers in a new research area fusing fine-grained object detection and societal analysis.
+Detecting a large number of BMWs in images informs us that those images may be of a wealthy area. Conversely, knowing that our images were obtained from a wealthy neighborhood increases the likelihood of detecting expensive cars. We explore this relationship between demographic factors and fine-grain classes by performing large scale detection of over 2600 car classes and conducting a social analysis of unprecedented scale in computer vision. Using 45 million images from 200 of the biggest cities in the United States,we predict demographic factors such as neighborhood wealth and crime statistics. Finally we show that just as fine-grain classes provide demographic information, societal cues can assist in fine-grain classification and improve accuracy. To facilitate our work, we have collected the largest and most challenging fine-grain dataset reported to date consisting of 3147 classes of cars comprised of images from google streetview and other web sources and classified by car experts to account for even the most subtle of visual differences. We hope our work ushers in a new research area fusing fine-grained object detection and societal analysis.
 \end{abstract}
 
 \section{Introduction}
 %%%%%%%%% BODY TEXT
-The ubiquity of streetview images has jumpstarted a new line of computer vision research focused on understanding cities through images \cite{mit_plos_1}~\cite{MIT_vision}~\cite{tamara}. For example, Hedalgo et al show that crime predictions can be improved by incorporating human perceptions of neighborhoods' images rather than using census data such as income alone~\cite{mit_plos_1} and Tamara's guy et al. and MIT people learn these perceptions using computer vision techniques. However, in order to extend these methods to other cities,extensive annotations of millions of images from each city would be required since, as tamara showed, algorithms trained on images of Boston, for example, cannot predict safety or wealth on images from San Francisco.  We explore the question of learning social priors using large scale fine-grain classifications of cars and show that many neighborhood statistics such as income and crime rate can be predicted from car detections. Furthermore, using our detections in conjunction with census data,we can answer questions like what types of cars do rich/poor people drive? 
+The ubiquity of streetview images has jumpstarted a new line of computer vision research focused on understanding cities through images \cite{mit_plos_1}~\cite{MIT_vision}~\cite{tamara}. For example, \cite{mit_plos_1} that crime predictions can be improved by incorporating human perceptions of neighborhoods' images rather than using census data such as income alone~\cite{mit_plos_1} and ~\cite{tamara} and \cite{MIT_vision} learn these perceptions using computer vision techniques. However, in order to extend these methods to other cities,extensive annotations of millions of images from each city would be required since, as ~\cite{tamara} showed, algorithms trained on images of Boston, for example, cannot predict safety or wealth on images from San Francisco.  We explore the question of learning social priors using large scale fine-grain classifications of cars and show that many neighborhood statistics such as income and crime rate can be predicted from car detections. Furthermore, using our detections in conjunction with census data,we can answer questions like what types of cars do rich/poor people drive? 
 
 \begin{figure}[t]
 \begin{center}
@@ -257,7 +257,7 @@ Not surprisingly, rich people also dirve newer cars. Figure \ref{fig:cartoincome
 %\label{fig:onecol}
 \end{figure}
 
-Finally,as shown in ~\ref{fig:cartoincome} C poor people live in zipcodes with cars that have low mileage while rich people live in zipcodes having cars with high MPG. As shown in ~\cite{pollution_race_ca} poor people are exposed to higher levels of pollution because they live near areas with higher traffic levels and cars with high C02 emissions. Finally Figure \ref{fig:pricetoedu}, shows the relationship between education and the average car price of detected cars in a zipcode. There is a moderate negative correlation of -0.211 between highschool educated people and the price of the car in their zipcode as opposed to a positive correlation of 0.319 between the number of graduate school educated people in a zipcode vs. the average car price. As expected, the jump in correlation coefficient from high school educated to college educated (-0.21 to 0.32) is higher than the jump from college educated to graduate school educated (0.32-0.39). Although we have found many interesting results, we will cover them in the supplemental material for the sake of brevety.
+Finally, as shown in figure ~\ref{fig:cartoincome} C poor people live in zipcodes with cars that have low mileage while rich people live in zipcodes having cars with high MPG. As shown in ~\cite{pollution_race_ca} poor people are exposed to higher levels of pollution because they live near areas with higher traffic levels and cars with high C02 emissions. Finally Figure \ref{fig:pricetoedu}, shows the relationship between education and the average car price of detected cars in a zipcode. There is a moderate negative correlation of -0.211 between highschool educated people and the price of the car in their zipcode as opposed to a positive correlation of 0.319 between the number of graduate school educated people in a zipcode vs. the average car price. As expected, the jump in correlation coefficient from high school educated to college educated (-0.21 to 0.32) is higher than the jump from college educated to graduate school educated (0.32-0.39). Although we have found many interesting results, we will cover them in the supplemental material for the sake of brevety.
 
 
 \begin{figure}[t]
@@ -282,7 +282,6 @@ Following the analysis of~\cite{mit_plos_1} we use Getis Gi* statistic to produc
 \begin{figure}[t]
 \begin{center}
 %\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
-
     \includegraphics[width=0.45\linewidth]{img/price.png}
     \includegraphics[width=0.45\linewidth]{img/income.png}
 \end{center}
@@ -291,11 +290,9 @@ Following the analysis of~\cite{mit_plos_1} we use Getis Gi* statistic to produc
 %\label{fig:onecol}
 \end{figure}
 
-
 \begin{figure}[t]
 \begin{center}
 %\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
-
     \includegraphics[width=0.45\linewidth]{img/boston-hotspot.png}
     \includegraphics[width=0.45\linewidth]{img/autocorr.png}
 \end{center}
@@ -305,25 +302,25 @@ Following the analysis of~\cite{mit_plos_1} we use Getis Gi* statistic to produc
 \end{figure}
 
 \section{Using social priors to improve classification}
-
 As shown in section ~\ref{sec:social} there is a very high correlation between some census variables such as income, and car attributes such as price and year. Given this relationship, we explore the use of census data to improve our fine-grain classification.
-\subsection{Analysing classification accuracy}
-Although we are classifying 2657 classes,it is important to know whether our classification errors are between highly similar or dissimilar classes. Fig. ~\ref{fig:fg-hierarchy} A shows one of a few possible hierarchies of car classes. As shown in Fig. ~\ref{fig:fg-hierarchy} B, most of the errors are lower in the hierarchy and are at the level of trims and years.  
 
-Since census data is most highly correlated with aggregate car attributes, one question is how much knowing ground truth car attributes would help in classification accuracy. Table~\ref{table:car-att} lists the classification accuracy after using ground truth car attributes. Surprisingly, knowing the manufactured country of the car gives very little gain in accuracy (~0.5\%). However, localizing the car price within one of two bins of expensive vs cheap cars provides a gain in accruacy of ~3\%. Looking at the confusion matricies in fig. ~\ref{fig:fg-confusion} we can see that after dividing the price into 5 bins using quantiles some expensive cars are confused with cheap cars where as most car countries of origin are not confused with other countries, except for one case of confusion between South Korean and Japanese cars. 
-
-We take this experiment further and plot accuracy Vs. price bin in fig.~\ref{fig:price-acc} for various numbers of price bins, all generated using quantiles,localized to various degrees of accuracy. For example, we can see that if we localize the price of the car to one of 4 bins we would get an 8\% increase in classification accuracy. However, even localizing the price to within 3 out of those 4 bins would result in a ~1\% increase.
+\subsection{Analyzing classification accuracy}
+Since census data is most highly correlated with aggregate car attributes, one question is how much knowing ground truth car attributes would help in classification accuracy. This gives us an upper bound for the gain in accuracy that can be obtained by using census variables as a prior. Table~\ref{table:car-att} lists the classification accuracy after using ground truth car attributes. Surprisingly, knowing the manufacturing country of the car gives very little gain in accuracy (\(\sim\) 0.5\%). However, localizing the car price to within one of two bins of expensive vs cheap cars provides a gain in accuracy of ~3\%. Looking at the confusion matrices in fig. ~\ref{fig:fg-confusion} we can see that after dividing the car price into 5 bins using quantiles, some expensive cars are confused with cheap cars where as most car countries of origin are not confused with other countries, except for one case of confusion between South Korean and Japanese cars.
 
 \begin{figure*}[t]
 \begin{center}
-   \includegraphics[width=0.4\linewidth]{img/fg-hierarchy.png}
+   \includegraphics[width=0.4\linewidth]{img/confusion_price5.png}
    \hspace{0.1\linewidth}
-   \includegraphics[width=0.4\linewidth]{img/percent-error.png}
+   \includegraphics[width=0.4\linewidth]{img/confusion_country.png}
 \end{center}
-   \caption{(A) Hierarchy of car classes. Images of cars become increasingly visually similar while travleing down the tree (B) Percentage of Error at each level of the hierarchy: for example trim/year error shows the percentage of errors that only occur at the trim year level (and classify make, model and submodel accurately)} 
-\label{fig*:fg-hierarchy}
-%\label{fig:onecol}
+   \caption{(A) Confusion matrix between different price bins. Cheap cars are mistaken for expensive cars (B) Between cars made in different countries}
+\label{fig:fg-confusion}
 \end{figure*}
+
+We take this experiment further and plot accuracy Vs. price bin in fig.~\ref{fig:price-acc} for various numbers of price bins, all generated using quantiles, localized to various degrees of accuracy. For example, we can see that if we localize
+ the price of the car to one of 4 bins we would get an 8\% increase in classification accuracy. However, even localizing 
+the price to within 3 out of those 4 bins would result in a ~1\% increase.
+
 
 \begin{table}
 \begin{center}
@@ -350,56 +347,57 @@ Ours & Makes one's heart Frob\\
 \end{figure}
 
 \subsection{Using census priors to predict attributes}
-As shown in ~\cite{birdsnap} ~\cite{Other context stuff} using contextual priors can improve object classification accuracy. In order to directly use census information as a prior, we would like to find \(P(C|I,S)\) where \(I\) is image and \(S\) is census information. Using Bayes' rule: 
+\label{sec:prior-att}
+As shown in ~\cite{birdsnap} ~\cite{Other context stuff} using contextual priors can improve object classification accuracy. In order to directly use census information as a prior, we would like to find \(P(C|I,Sk)\) where \(C\) is the fine-grain class,\(I\) is an image and \(Sk\) \(\in\) \(\{\)\(S1\) \ldots \(Sn\)\(\}\) is a particular zip code level census variable such as median household income. Using Bayes' rule:
 \begin{equation}
-\Pr(C|I,S)=\Pr(I,S|C)\Pr(C)/\Pr(I,S)
+P(C|I,Sk)=\frac{P(I,Sk|C)P(C)}{P(I,Sk)}
 \end{equation}
-If we assume that the image and census data are independent given the fine-grained class label, the above equation can be written as 
+If we assume that the image and census data are conditionally independent given the fine-grained class label, the above equation can be written as 
 \begin{equation}
-\Pr(C|I,S)=\Pr(I|C)\Pr(S|C)\Pr(C)/\Pr(I,S)
+P(C|I,Sk)=\frac{P(I|C)P(Sk|C)P(C)}{P(I,Sk)}
 \end{equation}
-After applying Baye's rule again to \(P(I|C)\) and \(P(S|C)\), we get
+After applying Bayes' rule again to \(P(I|C)\) and \(P(Sk|C)\) , we get 
 \begin{equation}
-\Pr(C|I,S)=\frac{\Pr(S|I)\Pr(I)}{\Pr(C)}\frac{\Pr(C|S)\Pr(S)}{\Pr(C)} \frac{\Pr(C)}{\Pr(I,S)}
+P(C|I,Sk)=\frac{P(C|I)P(I)}{P(C)}\frac{P(C|Sk)P(Sk)}{P(C)} \frac{P(C)}{P(I,Sk)}
 \end{equation}
 \begin{equation}
-\propto \frac{\Pr(C|I)}{\Pr(C)}\Pr(C|S)
+\propto \frac{P(C|I)}{P(C)}P(C|Sk)
 \label{eq:prior-eq}
 \end{equation}
 
-We experimented with different methods of using census variables as priors. The first method was to quantize census variables into variying numbers of bins and calculate \(P(C|Sn)\) in equation ~\ref{equation:prior-eq} for each census variable.
-As shown in table ~\ref{table:prior-acc} this method results in a reduction in accuracy because we do not have enough geotagged training data to gain informative knowledge from the census about one of 2657 fine-grain classes. Thus we reformulate \(P(C|s)\) in equation~\ref{equation:prior-eq} as \(P(C|An)\)\(P(An|Sn)\) where \(An\) is a particular car attribute such as car price. This formulation comes from the following naive bays generative model assuming that \(P(Sn)\) are the observed variables from which we can calculate \(P(An|Sn)\). After this modification, equation ~\ref{equation:prior-eq} can be written as 
+We experimented with different methods of using census variables as priors. The first method was to quantize them into varying numbers of bins and calculate \(P(C|Sk)\) in equation ~\ref{eq:prior-eq} for each census variable.As shown in table ~\ref{table:prior-acc} this method results in a reduction in accuracy because we do not have enough geotagged training data to gain informative knowledge from the census about one of 2657 fine-grain classes. However, although there are 2657 classes, the number of attribute classes is much lower. If \(Aj\) \(\in\) \(\{\) \(A1\) \ldots \(An\)\(\}\) represents a car attribute such as price, we can reformulate \(P(C|Sk)\) in equation~\ref{eq:prior-eq} as \(P(C|Aj)\)\(P(Aj|Sk)\). This formulation comes from a naive bays generative model assuming that \(Sk\) are the observed variables from which we can calculate \(P(Aj|Sk)\). After this modification, equation ~\ref{eq:prior-eq} can be written as
+
 
 \begin{equation}
-  \Pr(C|I,Sn) \propto \frac{\Pr(C|I)}{\Pr(C)}\Pr(C|An)\Pr(An|Sn)
+  P(C|I,Sk) \propto \frac{P(C|I)}{P(C)}P(C|Aj)P(Aj|Sk)
 \end{equation}
-We calculate \(P(C|I,Sn)\) for all car attributes and 30 different census variables, quantizing them into bins ranging from 2-20. Table~\ref{table:prior-acc} shows the 3 highest accuracy numbers for various combinations of census variables and car attributes. It can be seen that using median household income and either car price or year of car result in the highest accuracy gain (although this gain is very slight). This result is to be expected given the social analysis results of section~\ref{section:Societal analysis} showing high correlation between median household income and car price and car year.
+We calculate \(P(C|I,Sk)\) for all car attributes and 30 different census variables, quantizing them into bins ranging from 2-20. Table~\ref{table:prior-acc} shows the 3 highest accuracy numbers for various combinations of census variables and car attributes. It can be seen that using median household income and either car price or year result in the highest accuracy gain (although this gain is very slight). This result is to be expected given the social analysis results of section~\ref{sec:social} showing high correlation between median household income and car price and year.
 
 
 \subsection{Multiple car attributes and census variables}
-In the previous section we used single car attributes and census variables to calculate our prior probabilities. We also experimented with using multiple census variables to predict single car attributes as well as combining priors independently calculated from multiple cesnsus variables and car attributes. To obtain \(P(An|S1...Sn)\) we first quantize continuous attributes \(An\) into \(M\) bins where \(M\) ranges from 2 to 20. If \(An\) is a descrete attribute (such as car make), \(M\) is just the number of attribute classes. We then perform logistic regression along with feature selection to classify \(An\) into one of \(M\) bins using \(S1\) \ldots \(Sn\). \(P(An|S1\) \ldots \(Sn)\) is then the probability obtained through logistic regression.
+In section \ref{sec:prior-att} we used single car attributes and census variables to calculate prior probabilities. We also experimented with using multiple census variables to predict single car attributes as well as combining priors independently calculated from multiple census variables and car attributes. To obtain \(P(Aj|S1...Sn)\) we first quantize attributes \(Aj\) into \(M\) bins where \(M\) ranges from 2 to 20. If \(Aj\) has a fixed number of classes (such as car make), \(M\) is just the number of attribute classes. We then perform multi-class logistic regression along with feature selection to classify \(Aj\) into one of \(M\) bins using \(S1\) \ldots \(Sn\). \(P(Aj|S1\) \ldots \(Sn)\) is then the probability obtained through logistic regression.
 
-Finally, we combine the priors learned for different attributes by making an assumption that car attributes are independent from each other given the class. Using this assumption along with Baye's rule \(P(C|A1 \ldots An)\) can be written as 
-
-\begin{equation}
-\frac{\Pr(A1\ldots An|C)\Pr(C)}{\Pr(A1\ldots An)}
-\end{equation}
-After the conditional independence assumption it becomes
-\begin{equation}
-\frac{\Pr(C)}{\Pr(A1\ldots An)}\prod\limits_{i=1}^n \Pr(Ai|C)
-\end{equation}
-And after applying Baye's rule to \(P(Ai|C)\) we get 
-\begin{equation}
-\propto \frac{\Pr(C)}{\Pr(A1\ldots An)}\prod\limits_{i=1}^n \Pr(C|Ai)
-\end{equation}
-
-We also make one more assumption that car attributes are independent from each other given census variables.\(P(C|I,S1 \ldots Sn)\) is then  
+Finally, we combine the priors learned for different attributes by using the fact that car attributes are independent from each other given the class. Using this assumption along with Bayes’ rule \(P(C|A1 \ldots An)\) can be written as 
 
 \begin{equation}
-\propto \frac{\Pr(C)}{\Pr(A1\ldots An)}\prod\limits_{i=1}^n \Pr(C|Ai) \prod\limits_{i=1}^n \Pr(Ai|S1...Sn)
+\frac{P(A1\ldots An|C)P(C)}{P(A1\ldots An)}
+\end{equation}
+After making use of the conditional independence of \(A1\) \ldots \(An\) given \(C\) this becomes
+\begin{equation}
+\frac{P(C)}{P(A1\ldots An)}\prod\limits_{j=1}^n P(Aj|C)
+\end{equation}
+And after applying Bayes’ rule to \(P(Aj|C)\) we get 
+\begin{equation}
+\propto \frac{P(C)}{P(A1\ldots An)}\prod\limits_{j=1}^n P(C|Aj)
 \end{equation}
 
-Where \(P(Ai|S1...Sn)\) is given by the logistic regression probabilities.
+We assume that car attributes are independent from each other given census variables. \(P(C|I,S1 \ldots Sn)\) is then  
+
+\begin{equation}
+\propto \frac{P(C)}{P(A1\ldots An)}\prod\limits_{j=1}^n P(C|Aj)P(Aj|S1...Sn)
+\end{equation}
+
+Where \(P(Aj|S1...Sn)\) is given by the logistic regression probabilities.
 
 Table XXX shows the accuracies obtained after combining multiple census attributes and multiple car attributes. ***Maybe more descussion after experiments***
 \begin{table}
@@ -431,3 +429,4 @@ Ours & Makes one's heart Frob\\
 \bibliography{egbib}
 }
 \end{document}
+
