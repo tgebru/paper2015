@@ -13,11 +13,11 @@
 \backcite {caltech_birds}{{2}{3}{Item.7}}
 \backcite {rcnn}{{3}{4}{section.4}}
 \backcite {alexnet}{{3}{4}{section.4}}
-\backcite {alexnet}{{3}{4}{figure.8}}
-\backcite {caffe}{{3}{4}{figure.8}}
-\backcite {pollution_race_ca}{{4}{5.1}{figure.10}}
-\backcite {mit_plos_1}{{5}{5.3}{subsection.5.3}}
-\backcite {moran}{{5}{5.3}{subsection.5.3}}
-\backcite {census-segreggation}{{5}{5.3}{subsection.5.3}}
+\backcite {alexnet}{{3}{4}{figure.7}}
+\backcite {caffe}{{3}{4}{figure.7}}
+\backcite {cal-traffic-study}{{4}{5.1.2}{subsubsection.5.1.2}}
+\backcite {mit_plos_1}{{5}{5.3.1}{subsubsection.5.3.1}}
+\backcite {moran}{{5}{5.3.1}{subsubsection.5.3.1}}
+\backcite {census-segreggation}{{5}{5.3.1}{subsubsection.5.3.1}}
 \backcite {birdsnap}{{6}{6.2}{subsection.6.2}}
 \backcite {Other context stuff}{{6}{6.2}{subsection.6.2}}
