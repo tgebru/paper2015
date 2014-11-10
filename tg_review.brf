@@ -6,18 +6,15 @@
 \backcite {tamara}{{1}{1}{section.1}}
 \backcite {MIT_vision}{{1}{1}{section.1}}
 \backcite {tamara}{{1}{1}{section.1}}
-\backcite {birdsnap}{{1}{1}{figure.1}}
-\backcite {nyc3D,amir}{{1}{1}{figure.1}}
+\backcite {birdsnap}{{1}{1}{figure.2}}
+\backcite {nyc3D,amir}{{1}{1}{figure.2}}
 \backcite {MIT_vision}{{2}{2}{Item.6}}
 \backcite {zhang2014part}{{2}{3}{Item.7}}
 \backcite {caltech_birds}{{2}{3}{Item.7}}
 \backcite {rcnn}{{3}{4}{section.4}}
+\backcite {dpm}{{3}{4}{section.4}}
 \backcite {alexnet}{{3}{4}{section.4}}
-\backcite {alexnet}{{3}{4}{figure.7}}
-\backcite {caffe}{{3}{4}{figure.7}}
-\backcite {cal-traffic-study}{{4}{5.1.2}{subsubsection.5.1.2}}
-\backcite {mit_plos_1}{{5}{5.3.1}{subsubsection.5.3.1}}
-\backcite {moran}{{5}{5.3.1}{subsubsection.5.3.1}}
-\backcite {census-segreggation}{{5}{5.3.1}{subsubsection.5.3.1}}
-\backcite {birdsnap}{{6}{6.2}{subsection.6.2}}
-\backcite {Other context stuff}{{6}{6.2}{subsection.6.2}}
+\backcite {alexnet}{{3}{4.2}{subsection.4.2}}
+\backcite {caffe}{{3}{4.2}{subsection.4.2}}
+\backcite {cal-traffic-study}{{5}{5.1.2}{subsubsection.5.1.2}}
+\backcite {mit_plos_1}{{6}{5.3.1}{subsubsection.5.3.1}}
