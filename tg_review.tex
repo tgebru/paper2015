@@ -133,7 +133,7 @@ No. car types & 18017 & - & -\\
 \hline
 \end{tabular}
 \end{center}
-\caption{Accuracy by car attribute}
+\caption{Street view data statistics}
 \label{table:data}
 \end{table}
 We first collected 45 million images from 8 million GPS points by sampling the roads of 200 of the biggest US cities every 25m. For each GPS coordinate we gathered street view images at 0, 60, 120, 180, 240, 300 degree rotations. In order to train a fine-grained car classifier to detect and classify the cars in our images, we created the largest ever reported fine-grained dataset of cars consisting of all the cars listed on edmunds.com (all cars manufactured after 1990). To assemble our car dataset we obtained images of all cars in edmunds.com (\(\sim18k\)cars) and grouped the cars into visually indistinguishable classes using a series of amazon mechanical turk tasks. After creating a class list, we collected additional images of cars from cars.com as well as craigslist and used AMT to annotate them with bounding boxes. Finally, we hired car experts to label \(\sim 70\)k bounding boxes of cars from the street view images with fine-grained lables. We also labeled cars from craigslist and cars.com by parsing the car posting titles. 
@@ -154,12 +154,12 @@ Inorder to evaluate accuracy/speed trade off, we trained DPMS with different num
 \hline
 \textbf{Attribute} & \textbf{Acc\%} \\
 \hline\hline
-Make & X \\
+Make & 66.38 \\
 Model & X \\
-Submodel & X \\
+Submodel & 77.74 \\
 Year (5 bins) & X \\
-Price (5 bins)& X \\
-Domestic/Foreign & X\\
+Price (5 bins)& 61.61 \\
+Domestic/Foreign & 87.71\\
 Country & X\\
 \hline
 \end{tabular}
