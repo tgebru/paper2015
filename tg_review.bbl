@@ -1,9 +1,14 @@
-\begin{thebibliography}{1}\itemsep=-1pt
+\begin{thebibliography}{10}\itemsep=-1pt
 
 \bibitem{amir}
 S.~Ardeshir, A.~R. Zamir, A.~Torroella, and M.~Shah.
 \newblock Gis-assisted object detection and geospatial localization.
 \newblock In {\em Computer Vision--ECCV 2014}, pages 602--617. Springer, 2014.
+
+\bibitem{ground_air}
+S.~Bay Area Air Quality Management~District.
+\newblock Average annual pm 2.5 concentration from all sources{@ONLINE}, June
+  2010.
 
 \bibitem{birdsnap}
 T.~Berg, J.~Liu, S.~W. Lee, M.~L. Alexander, D.~W. Jacobs, and P.~N. Belhumeur.
@@ -11,13 +16,95 @@ T.~Berg, J.~Liu, S.~W. Lee, M.~L. Alexander, D.~W. Jacobs, and P.~N. Belhumeur.
 \newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2014 IEEE
   Conference on}, pages 2019--2026. IEEE, 2014.
 
-\bibitem{nyc3D}
+\bibitem{car_stats}
+R.~Chase.
+\newblock Does everyone in america own a car? {@ONLINE}, June 2009.
+
+\bibitem{nlp_people}
+J.~Cheng, C.~Danescu-Niculescu-Mizil, and J.~Leskovec.
+\newblock How community feedback shapes user behavior.
+\newblock In {\em Eighth International AAAI Conference on Weblogs and Social
+  Media}, 2014.
+
+\bibitem{imagenet}
+J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, and L.~Fei-Fei.
+\newblock Imagenet: A large-scale hierarchical image database.
+\newblock In {\em Computer Vision and Pattern Recognition, 2009. CVPR 2009.
+  IEEE Conference on}, pages 248--255. IEEE, 2009.
+
+\bibitem{paris}
+C.~Doersch, S.~Singh, A.~Gupta, J.~Sivic, and A.~A. Efros.
+\newblock What makes paris look like paris?
+\newblock {\em ACM Trans. Graph.}, 31(4):101, 2012.
+
+\bibitem{dpm}
+P.~F. Felzenszwalb, R.~B. Girshick, D.~McAllester, and D.~Ramanan.
+\newblock Object detection with discriminatively trained part based models.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  32(9):1627--1645, 2010.
+
+\bibitem{rcnn}
+R.~Girshick, J.~Donahue, T.~Darrell, and J.~Malik.
+\newblock Rich feature hierarchies for accurate object detection and semantic
+  segmentation.
+\newblock {\em arXiv preprint arXiv:1311.2524}, 2013.
+
+\bibitem{dpm_web}
+R.~B. Girshick, P.~F. Felzenszwalb, and D.~McAllester.
+\newblock Discriminatively trained deformable part models, release 5.
+\newblock http://people.cs.uchicago.edu/~rbg/latent-release5/.
+
+\bibitem{caffe}
+Y.~Jia, E.~Shelhamer, J.~Donahue, S.~Karayev, J.~Long, R.~Girshick,
+  S.~Guadarrama, and T.~Darrell.
+\newblock Caffe: Convolutional architecture for fast feature embedding.
+\newblock In {\em Proceedings of the ACM International Conference on
+  Multimedia}, pages 675--678. ACM, 2014.
+
+\bibitem{cal-traffic-study}
+C.~Katz.
+\newblock People in poor neighborhoods breathe more hazardous particles
+  {@ONLINE}, June 2012.
+
+\bibitem{mcdonalds}
+A.~Khosla, B.~An, J.~J. Lim, and A.~Torralba.
+\newblock Looking beyond the visible scene.
+
+\bibitem{dogs}
+A.~Khosla, N.~Jayadevaprakash, B.~Yao, and L.~Fei-Fei.
+\newblock Novel dataset for fine-grained image categorization.
+\newblock In {\em First Workshop on Fine-Grained Visual Categorization, IEEE
+  Conference on Computer Vision and Pattern Recognition}, Colorado Springs, CO,
+  June 2011.
+
+\bibitem{cars}
+J.~Krause, J.~Deng, M.~Stark, and L.~Fei-Fei.
+\newblock Collecting a large-scale dataset of fine-grained cars.
+
+\bibitem{alexnet}
+A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in neural information processing systems}, pages
+  1097--1105, 2012.
+
+\bibitem{foreign_domestic}
+J.~Levine.
+\newblock What do you drive? patterns in us car dealerships {@ONLINE}, June
+  2014.
+
+\bibitem{nyc3d}
 K.~Matzen and N.~Snavely.
 \newblock Nyc3dcars: A dataset of 3d vehicles in geographic context.
 \newblock In {\em Computer Vision (ICCV), 2013 IEEE International Conference
   on}, pages 761--768. IEEE, 2013.
 
-\bibitem{MIT_vision}
+\bibitem{ngrams}
+J.-B. Michel, Y.~K. Shen, A.~P. Aiden, A.~Veres, M.~K. Gray, J.~P. Pickett,
+  D.~Hoiberg, D.~Clancy, P.~Norvig, J.~Orwant, et~al.
+\newblock Quantitative analysis of culture using millions of digitized books.
+\newblock {\em science}, 331(6014):176--182, 2011.
+
+\bibitem{mit_cvpr}
 N.~Naik, J.~Philipoom, R.~Raskar, and C.~Hidalgo.
 \newblock Streetscore--predicting the perceived safety of one million
   streetscapes.
@@ -35,14 +122,26 @@ P.~Salesses, K.~Schechtner, and C.~A. Hidalgo.
   perception.
 \newblock {\em PloS one}, 8(7):e68400, 2013.
 
-\bibitem{caltech_birds}
+\bibitem{birds}
 C.~Wah, S.~Branson, P.~Welinder, P.~Perona, and S.~Belongie.
 \newblock The caltech-ucsd birds-200-2011 dataset.
 \newblock 2011.
 
-\bibitem{zhang2014part}
+\bibitem{jure}
+R.~West, H.~S. Paskov, J.~Leskovec, and C.~Potts.
+\newblock Exploiting social network structure for person-to-person sentiment
+  analysis.
+\newblock {\em arXiv preprint arXiv:1409.2450}, 2014.
+
+\bibitem{ning}
 N.~Zhang, J.~Donahue, R.~Girshick, and T.~Darrell.
 \newblock Part-based r-cnns for fine-grained category detection.
 \newblock In {\em Computer Vision--ECCV 2014}, pages 834--849. Springer, 2014.
+
+\bibitem{antonio}
+B.~Zhou, L.~Liu, A.~Oliva, and A.~Torralba.
+\newblock Recognizing city identity via attribute analysis of geo-tagged
+  images.
+\newblock In {\em Computer Vision--ECCV 2014}, pages 519--534. Springer, 2014.
 
 \end{thebibliography}

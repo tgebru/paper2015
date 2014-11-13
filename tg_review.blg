@@ -2,46 +2,58 @@ This is BibTeX, Version 0.99c (Web2C 7.5.6)
 The top-level auxiliary file: tg_review.aux
 The style file: ieee.bst
 Database file #1: egbib.bib
-Warning--empty journal in caltech_birds
-You've used 8 entries,
+Warning--entry type for "car_stats" isn't style-file defined
+--line 99 of file egbib.bib
+Warning--entry type for "cal-traffic-study" isn't style-file defined
+--line 190 of file egbib.bib
+Warning--entry type for "ground_air" isn't style-file defined
+--line 198 of file egbib.bib
+Warning--entry type for "foreign_domestic" isn't style-file defined
+--line 206 of file egbib.bib
+Warning--empty journal in mcdonalds
+Warning--empty year in mcdonalds
+Warning--empty journal in cars
+Warning--empty year in cars
+Warning--empty journal in birds
+You've used 26 entries,
             2120 wiz_defined-function locations,
-            545 strings with 5228 characters,
-and the built_in function-call counts, 3840 in all, are:
-= -- 397
-> -- 174
-< -- 6
-+ -- 70
-- -- 60
-* -- 253
-:= -- 580
-add.period$ -- 30
-call.type$ -- 8
-change.case$ -- 54
+            627 strings with 8380 characters,
+and the built_in function-call counts, 10436 in all, are:
+= -- 1007
+> -- 579
+< -- 10
++ -- 230
+- -- 202
+* -- 722
+:= -- 1669
+add.period$ -- 81
+call.type$ -- 26
+change.case$ -- 178
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 164
-empty$ -- 293
-format.name$ -- 60
-if$ -- 858
+cite$ -- 31
+duplicate$ -- 395
+empty$ -- 771
+format.name$ -- 202
+if$ -- 2229
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 8
-newline$ -- 43
-num.names$ -- 16
-pop$ -- 72
+int.to.str$ -- 26
+missing$ -- 21
+newline$ -- 127
+num.names$ -- 52
+pop$ -- 242
 preamble$ -- 1
-purify$ -- 46
+purify$ -- 152
 quote$ -- 0
-skip$ -- 127
+skip$ -- 303
 stack$ -- 0
-substring$ -- 260
-swap$ -- 66
-text.length$ -- 6
+substring$ -- 551
+swap$ -- 124
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 32
-warning$ -- 1
-while$ -- 35
-width$ -- 9
-write$ -- 94
-(There was 1 warning)
+type$ -- 104
+warning$ -- 5
+while$ -- 88
+width$ -- 28
+write$ -- 270
+(There were 9 warnings)

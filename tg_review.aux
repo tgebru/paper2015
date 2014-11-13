@@ -18,17 +18,20 @@
 \citation{mcdonalds}
 \citation{mit_cvpr}
 \citation{tamara}
+\citation{car_stats}
 \@writefile{toc}{\contentsline {section}{\numberline {1}\hskip -1em.\nobreakspace  {}Introduction}{1}{section.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Cars on the street provide information about people and their neighborhoods. Without location information, we can guess that images from the first column are from wealthy areas where as those from the second column are from poorer neighborhoods.}}{1}{figure.1}}
-\newlabel{fig:pull}{{1}{1}{Cars on the street provide information about people and their neighborhoods. Without location information, we can guess that images from the first column are from wealthy areas where as those from the second column are from poorer neighborhoods}{figure.1}{}}
 \@writefile{brf}{\backcite{jure}{{1}{1}{figure.2}}}
 \@writefile{brf}{\backcite{nlp_people}{{1}{1}{figure.2}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Cars on the street provide information about people and their neighborhoods. Without location information, we can guess that images from the first column are from wealthy areas where as those from the second column are from poorer neighborhoods.}}{1}{figure.1}}
+\newlabel{fig:pull}{{1}{1}{Cars on the street provide information about people and their neighborhoods. Without location information, we can guess that images from the first column are from wealthy areas where as those from the second column are from poorer neighborhoods}{figure.1}{}}
 \@writefile{brf}{\backcite{ngrams}{{1}{1}{figure.2}}}
 \@writefile{brf}{\backcite{antonio}{{1}{1}{figure.2}}}
 \@writefile{brf}{\backcite{mcdonalds}{{1}{1}{figure.2}}}
 \@writefile{brf}{\backcite{mit_cvpr}{{1}{1}{figure.2}}}
 \@writefile{brf}{\backcite{tamara}{{1}{1}{figure.2}}}
+\@writefile{brf}{\backcite{car_stats}{{1}{1}{figure.2}}}
 \citation{dpm}
+\citation{dpm_web}
 \citation{alexnet}
 \citation{mit_plos_1}
 \citation{tamara}
@@ -43,8 +46,7 @@
 \citation{paris}
 \citation{mcdonalds}
 \citation{ning}
-\citation{steve}
-\citation{jon}
+\citation{cars}
 \citation{birds}
 \citation{dogs}
 \citation{cars}
@@ -58,6 +60,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Left: examples of cars from craigslist, cars.com and edmunds.com, Right: examples of cars from streetview images. Cars from streetview images are blurred and occluded.}}{2}{figure.2}}
 \newlabel{fig:dataset1}{{2}{2}{Left: examples of cars from craigslist, cars.com and edmunds.com, Right: examples of cars from streetview images. Cars from streetview images are blurred and occluded}{figure.2}{}}
 \@writefile{brf}{\backcite{dpm}{{2}{1}{figure.2}}}
+\@writefile{brf}{\backcite{dpm_web}{{2}{1}{figure.2}}}
 \@writefile{brf}{\backcite{alexnet}{{2}{1}{figure.2}}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}\hskip -1em.\nobreakspace  {}Related Work}{2}{section.2}}
 \@writefile{brf}{\backcite{mit_plos_1}{{2}{2}{section.2}}}
@@ -73,8 +76,7 @@
 \@writefile{brf}{\backcite{paris}{{2}{2}{section.2}}}
 \@writefile{brf}{\backcite{mcdonalds}{{2}{2}{section.2}}}
 \@writefile{brf}{\backcite{ning}{{2}{2}{section.2}}}
-\@writefile{brf}{\backcite{steve}{{2}{2}{section.2}}}
-\@writefile{brf}{\backcite{jon}{{2}{2}{section.2}}}
+\@writefile{brf}{\backcite{cars}{{2}{2}{section.2}}}
 \@writefile{brf}{\backcite{birds}{{2}{2}{section.2}}}
 \@writefile{brf}{\backcite{dogs}{{2}{2}{section.2}}}
 \@writefile{brf}{\backcite{cars}{{2}{2}{section.2}}}
@@ -87,7 +89,6 @@
 \@writefile{brf}{\backcite{nyc3d}{{2}{2}{section.2}}}
 \citation{rcnn}
 \citation{ning}
-\citation{branson}
 \citation{dpm}
 \citation{alexnet}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Left: A hierarchy of car classes where images become more difficult to distinguish while travelling down the tree.The leaves (e.g. class 1 and class 2) are the fine-grained classes. Center: Class image distribution for web images. We have the most number of images for 2001-2003 Hyundai Elatra sedan glx and the least for 1990-1992 Audi 80 sedan base. Right: class image distribution for street view images.}}{3}{figure.3}}
@@ -95,81 +96,100 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Left: Location/scale heatmap of streetview bounding boxes with red indicating larger sizes and blue smaller ones. Each point indicates the size of a bounding box centered at that point in a street view image.}}{3}{figure.4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Right: Heatmap of streetview bounding box locations. Most cars are located in a line slightly below the center of the image.}}{3}{figure.5}}
 \newlabel{fig:loc-heat}{{5}{3}{Right: Heatmap of streetview bounding box locations. Most cars are located in a line slightly below the center of the image}{figure.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Accuracy by car attribute}}{3}{table.1}}
-\newlabel{table:data}{{1}{3}{Accuracy by car attribute\relax }{table.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Street view data statistics}}{3}{table.1}}
+\newlabel{table:data}{{1}{3}{Street view data statistics\relax }{table.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}\hskip -1em.\nobreakspace  {}Cars and Cities Dataset}{3}{section.3}}
 \newlabel{sec:data}{{3}{3}{\hskip -1em.~Cars and Cities Dataset\relax }{section.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}\hskip -1em.\nobreakspace  {}Detecting and classifying cars}{3}{section.4}}
 \newlabel{sec:detection}{{4}{3}{\hskip -1em.~Detecting and classifying cars\relax }{section.4}{}}
 \@writefile{brf}{\backcite{rcnn}{{3}{4}{section.4}}}
 \@writefile{brf}{\backcite{ning}{{3}{4}{section.4}}}
-\@writefile{brf}{\backcite{branson}{{3}{4}{section.4}}}
 \@writefile{brf}{\backcite{dpm}{{3}{4}{section.4}}}
 \@writefile{brf}{\backcite{alexnet}{{3}{4}{section.4}}}
 \citation{alexnet}
 \citation{caffe}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Accuracy by car attribute}}{4}{table.2}}
-\newlabel{table:tree-acc}{{2}{4}{Accuracy by car attribute\relax }{table.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces An example of our car detections and classifications. The red boxes are DPM bounding boxes that are not classified by our CNN and green boxes are boxes classifyied by the CNN. The two cars in the image are correctly classified to the classes shown on the right.}}{4}{figure.6}}
-\newlabel{fig:dets}{{6}{4}{An example of our car detections and classifications. The red boxes are DPM bounding boxes that are not classified by our CNN and green boxes are boxes classifyied by the CNN. The two cars in the image are correctly classified to the classes shown on the right}{figure.6}{}}
+\newlabel{table:att-acc}{{2}{4}{Accuracy by car attribute\relax }{table.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Confusion matrix for car submodel. As expected, the confusion is between similar types of submodels such as a sedan and coupe or an extended cab and a crew-cab.}}{4}{figure.6}}
+\newlabel{fig:confusion}{{6}{4}{Confusion matrix for car submodel. As expected, the confusion is between similar types of submodels such as a sedan and coupe or an extended cab and a crew-cab}{figure.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}\hskip -1em.\nobreakspace  {}Car Detection}{4}{subsection.4.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}\hskip -1em.\nobreakspace  {}Car Classification}{4}{subsection.4.2}}
 \@writefile{brf}{\backcite{alexnet}{{4}{4.2}{subsection.4.2}}}
 \@writefile{brf}{\backcite{caffe}{{4}{4.2}{subsection.4.2}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces An example of our car detections and classifications. The red boxes are DPM bounding boxes that are not classified by our CNN and green boxes are boxes classifyied by the CNN. The two cars in the image are correctly classified to the classes shown on the right.}}{4}{figure.7}}
+\newlabel{fig:dets}{{7}{4}{An example of our car detections and classifications. The red boxes are DPM bounding boxes that are not classified by our CNN and green boxes are boxes classifyied by the CNN. The two cars in the image are correctly classified to the classes shown on the right}{figure.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}\hskip -1em.\nobreakspace  {}Analyzing Hierarchical Classification Accuracy}{4}{subsection.4.3}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}\hskip -1em.\nobreakspace  {}Societal analysis}{4}{section.5}}
 \newlabel{sec:social}{{5}{4}{\hskip -1em.~Societal analysis\relax }{section.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}\hskip -1em.\nobreakspace  {}What cars on the street tell us about people}{4}{subsection.5.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Sanity Check: Cars on the street correlate well with registred cars}{4}{subsubsection.5.1.1}}
 \citation{cal-traffic-study}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Left: Pearson correlation coefficient and p values between the number of detected and registered cars in Boston for each make. Center: scatter plot of detected cars per zip code vs. registered cars per zip code in Boston. Left: scatter plot of No. of detected Honda's per zip code vs. registered Honda's per zip code in Boston.}}{5}{figure.8}}
-\newlabel{fig:ma_corrs}{{8}{5}{Left: Pearson correlation coefficient and p values between the number of detected and registered cars in Boston for each make. Center: scatter plot of detected cars per zip code vs. registered cars per zip code in Boston. Left: scatter plot of No. of detected Honda's per zip code vs. registered Honda's per zip code in Boston}{figure.8}{}}
+\citation{ground_air}
+\citation{ground_air}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Pearson correlation coefficient between various census variables and detected car attributes. All p values are \relax $\sim \relax \GenericError  {               }{LaTeX Error: Bad math environment delimiter}{See the LaTeX manual or LaTeX Companion for explanation.}{Your command was ignored.\MessageBreak Type  I <command> <return>  to replace it with another command,\MessageBreak or  <return>  to continue without it.} 0.}}{5}{table.3}}
 \newlabel{table:car-census-corrs}{{3}{5}{Pearson correlation coefficient between various census variables and detected car attributes. All p values are \(\sim \) 0}{table.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Scatter plot of median household income per zip code vs. average price of detected cars per zip code.}}{5}{figure.7}}
-\newlabel{fig:price-income-corr}{{7}{5}{Scatter plot of median household income per zip code vs. average price of detected cars per zip code}{figure.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}\hskip -1em.\nobreakspace  {}What cars on the street tell us about people}{5}{subsection.5.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Sanity Check: Cars on the street correlate well with registred cars}{5}{subsubsection.5.1.1}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}What do rich/poor people drive?}{5}{subsubsection.5.1.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Scatter plot of median household income per zip code vs. average price of detected cars per zip code.}}{5}{figure.8}}
+\newlabel{fig:price-income-corr}{{8}{5}{Scatter plot of median household income per zip code vs. average price of detected cars per zip code}{figure.8}{}}
 \@writefile{brf}{\backcite{cal-traffic-study}{{5}{5.1.2}{subsubsection.5.1.2}}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}How does education relate to cars on the street?}{5}{subsubsection.5.1.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}\hskip -1em.\nobreakspace  {}What cars on the street tell us about neighborhoods}{5}{subsection.5.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Which neighborhoods are wealthy/poor?}{5}{subsubsection.5.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Left: Pearson correlation coefficient and p values between the number of detected and registered cars in Boston for each make. Center: scatter plot of detected cars per zip code vs. registered cars per zip code in Boston. Left: scatter plot of No. of detected Honda's per zip code vs. registered Honda's per zip code in Boston.}}{6}{figure.9}}
+\newlabel{fig:ma_corrs}{{9}{6}{Left: Pearson correlation coefficient and p values between the number of detected and registered cars in Boston for each make. Center: scatter plot of detected cars per zip code vs. registered cars per zip code in Boston. Left: scatter plot of No. of detected Honda's per zip code vs. registered Honda's per zip code in Boston}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Top left: Heat map of average car price in Boston, center: heat map of median household income in Boston. Bottom left: Heat map of average car price in Houston, center: heat map of median household income in Houston. Left example of street view images and car detections corresponding to zip codes with high and low incomes. Low income areas have many cheap cars where as high income areas have expensive ones.}}{6}{figure.10}}
+\newlabel{fig:bos-sf-vis}{{10}{6}{Top left: Heat map of average car price in Boston, center: heat map of median household income in Boston. Bottom left: Heat map of average car price in Houston, center: heat map of median household income in Houston. Left example of street view images and car detections corresponding to zip codes with high and low incomes. Low income areas have many cheap cars where as high income areas have expensive ones}{figure.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}Which neighborhoods have high car pollution?}{6}{subsubsection.5.2.2}}
 \citation{ground_air}
-\citation{ground_air}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Top left: Heat map of average car price in Boston, center: heat map of median household income in Boston. Bottom left: Heat map of average car price in Houston, center: heat map of median household income in Houston. Left example of street view images and car detections corresponding to zip codes with high and low incomes. Low income areas have many cheap cars where as high income areas have expensive ones.}}{6}{figure.9}}
-\newlabel{fig:bos-sf-vis}{{9}{6}{Top left: Heat map of average car price in Boston, center: heat map of median household income in Boston. Bottom left: Heat map of average car price in Houston, center: heat map of median household income in Houston. Left example of street view images and car detections corresponding to zip codes with high and low incomes. Low income areas have many cheap cars where as high income areas have expensive ones}{figure.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}\hskip -1em.\nobreakspace  {}What cars on the street tell us about neighborhoods}{6}{subsection.5.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Which neighborhoods are wealthy/poor?}{6}{subsubsection.5.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces A. Density of cars in San francisco inversely weighted by their expected miles per gallon (MPG), B. The inverse of weighted average of car MPG in San Francisco. The weights are the expected number of cars in a GPS point, C. Ground Truth for Air quality (measured in annual particulate matter) in San Francisco from\nobreakspace  {}\cite  {ground_air}.}}{6}{figure.10}}
-\@writefile{brf}{\backcite{ground_air}{{6}{10}{figure.10}}}
-\newlabel{fig:pollution}{{10}{6}{A. Density of cars in San francisco inversely weighted by their expected miles per gallon (MPG), B. The inverse of weighted average of car MPG in San Francisco. The weights are the expected number of cars in a GPS point, C. Ground Truth for Air quality (measured in annual particulate matter) in San Francisco from~\cite {ground_air}}{figure.10}{}}
-\citation{air_quality_gov}
 \citation{mit_plos_1}
 \citation{foreign_domestic}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}Which neighborhoods have high car pollution?}{7}{subsubsection.5.2.2}}
-\@writefile{brf}{\backcite{air_quality_gov}{{7}{5.2.2}{subsubsection.5.2.2}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces A. Density of cars in San francisco inversely weighted by their expected miles per gallon (MPG), B. The inverse of weighted average of car MPG in San Francisco. The weights are the expected number of cars in a GPS point, C. Ground Truth for Air quality (measured in annual particulate matter) in San Francisco from\nobreakspace  {}\cite  {ground_air}.}}{7}{figure.11}}
+\@writefile{brf}{\backcite{ground_air}{{7}{11}{figure.11}}}
+\newlabel{fig:pollution}{{11}{7}{A. Density of cars in San francisco inversely weighted by their expected miles per gallon (MPG), B. The inverse of weighted average of car MPG in San Francisco. The weights are the expected number of cars in a GPS point, C. Ground Truth for Air quality (measured in annual particulate matter) in San Francisco from~\cite {ground_air}}{figure.11}{}}
+\@writefile{brf}{\backcite{ground_air}{{7}{5.2.2}{subsubsection.5.2.2}}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}\hskip -1em.\nobreakspace  {}What cars on the street tell us about cities}{7}{subsection.5.3}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Which cities are more segregated?}{7}{subsubsection.5.3.1}}
 \@writefile{brf}{\backcite{mit_plos_1}{{7}{5.3.1}{subsubsection.5.3.1}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Moran I scores for car prices. The highest and lowest scoring cities are shown as well as 5 cities with scores in between. Reno exhibits the most amount of clustering by car price where as Dover exhibits very little clustering. The two maps for Boston and Dover show areas of high clustering where green indicates statistically significant clustering of expensive cars and red indicates statistically significant clustering of cheap cars.}}{7}{figure.12}}
+\newlabel{fig:moran-i}{{12}{7}{Moran I scores for car prices. The highest and lowest scoring cities are shown as well as 5 cities with scores in between. Reno exhibits the most amount of clustering by car price where as Dover exhibits very little clustering. The two maps for Boston and Dover show areas of high clustering where green indicates statistically significant clustering of expensive cars and red indicates statistically significant clustering of cheap cars}{figure.12}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Which cities are more patriotic?}{7}{subsubsection.5.3.2}}
 \@writefile{brf}{\backcite{foreign_domestic}{{7}{5.3.2}{subsubsection.5.3.2}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Moran I scores for car prices. The highest and lowest scoring cities are shown as well as 5 cities with scores in between. Reno exhibits the most amount of clustering by car price where as Dover exhibits very little clustering. The two maps for Boston and Dover show areas of high clustering where green indicates statistically significant clustering of expensive cars and red indicates statistically significant clustering of cheap cars.}}{7}{figure.11}}
-\newlabel{fig:moran-i}{{11}{7}{Moran I scores for car prices. The highest and lowest scoring cities are shown as well as 5 cities with scores in between. Reno exhibits the most amount of clustering by car price where as Dover exhibits very little clustering. The two maps for Boston and Dover show areas of high clustering where green indicates statistically significant clustering of expensive cars and red indicates statistically significant clustering of cheap cars}{figure.11}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Census variables resulting in the highest accuracy gain for each car attribute. Car price/year with median household income give the highest gain in accuracy.}}{7}{table.4}}
-\newlabel{table:prior-acc}{{4}{7}{Census variables resulting in the highest accuracy gain for each car attribute. Car price/year with median household income give the highest gain in accuracy}{table.4}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.3}Which cities are wealthier?}{7}{subsubsection.5.3.3}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}\hskip -1em.\nobreakspace  {}Using social priors to improve classification}{7}{section.6}}
 \newlabel{sec:prior}{{6}{7}{\hskip -1em.~Using social priors to improve classification\relax }{section.6}{}}
 \bibstyle{ieee}
 \bibdata{egbib}
 \bibcite{amir}{1}
-\bibcite{birdsnap}{2}
-\bibcite{nyc3D}{3}
-\bibcite{MIT_vision}{4}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Map of the percentage of foreign cars in each city. San Francisco has the highest percentage with (61\% and Casper the lowest with 21\%.}}{8}{figure.12}}
-\newlabel{fig:city_price}{{12}{8}{Map of the percentage of foreign cars in each city. San Francisco has the highest percentage with (61\% and Casper the lowest with 21\%}{figure.12}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Map of the United States showing the expected car price in each city. New York has the highest expected car price where as El Paso has the lowest.}}{8}{figure.13}}
-\newlabel{fig:city_price}{{13}{8}{Map of the United States showing the expected car price in each city. New York has the highest expected car price where as El Paso has the lowest}{figure.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Map of the percentage of foreign cars in each city. San Francisco has the highest percentage with (61\% and Casper the lowest with 21\%.}}{8}{figure.13}}
+\newlabel{fig:city_price}{{13}{8}{Map of the percentage of foreign cars in each city. San Francisco has the highest percentage with (61\% and Casper the lowest with 21\%}{figure.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Map of the United States showing the expected car price in each city. New York has the highest expected car price where as El Paso has the lowest.}}{8}{figure.14}}
+\newlabel{fig:city_price}{{14}{8}{Map of the United States showing the expected car price in each city. New York has the highest expected car price where as El Paso has the lowest}{figure.14}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Census variables resulting in the highest accuracy gain for each car attribute. Car price/year with median household income give the highest gain in accuracy.}}{8}{table.4}}
+\newlabel{table:prior-acc}{{4}{8}{Census variables resulting in the highest accuracy gain for each car attribute. Car price/year with median household income give the highest gain in accuracy}{table.4}{}}
 \newlabel{eq:prior-eq}{{1}{8}{\hskip -1em.~Using social priors to improve classification\relax }{equation.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {7}\hskip -1em.\nobreakspace  {}Conclusion}{8}{section.7}}
-\bibcite{tamara}{5}
-\bibcite{mit_plos_1}{6}
-\bibcite{caltech_birds}{7}
-\bibcite{zhang2014part}{8}
+\bibcite{ground_air}{2}
+\bibcite{birdsnap}{3}
+\bibcite{car_stats}{4}
+\bibcite{nlp_people}{5}
+\bibcite{imagenet}{6}
+\bibcite{paris}{7}
+\bibcite{dpm}{8}
+\bibcite{rcnn}{9}
+\bibcite{dpm_web}{10}
+\bibcite{caffe}{11}
+\bibcite{cal-traffic-study}{12}
+\bibcite{mcdonalds}{13}
+\bibcite{dogs}{14}
+\bibcite{cars}{15}
+\bibcite{alexnet}{16}
+\bibcite{foreign_domestic}{17}
+\bibcite{nyc3d}{18}
+\bibcite{ngrams}{19}
+\bibcite{mit_cvpr}{20}
+\bibcite{tamara}{21}
+\bibcite{mit_plos_1}{22}
+\bibcite{birds}{23}
+\bibcite{jure}{24}
+\bibcite{ning}{25}
+\bibcite{antonio}{26}

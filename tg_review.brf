@@ -5,7 +5,9 @@
 \backcite {mcdonalds}{{1}{1}{figure.2}}
 \backcite {mit_cvpr}{{1}{1}{figure.2}}
 \backcite {tamara}{{1}{1}{figure.2}}
+\backcite {car_stats}{{1}{1}{figure.2}}
 \backcite {dpm}{{2}{1}{figure.2}}
+\backcite {dpm_web}{{2}{1}{figure.2}}
 \backcite {alexnet}{{2}{1}{figure.2}}
 \backcite {mit_plos_1}{{2}{2}{section.2}}
 \backcite {tamara}{{2}{2}{section.2}}
@@ -20,8 +22,7 @@
 \backcite {paris}{{2}{2}{section.2}}
 \backcite {mcdonalds}{{2}{2}{section.2}}
 \backcite {ning}{{2}{2}{section.2}}
-\backcite {steve}{{2}{2}{section.2}}
-\backcite {jon}{{2}{2}{section.2}}
+\backcite {cars}{{2}{2}{section.2}}
 \backcite {birds}{{2}{2}{section.2}}
 \backcite {dogs}{{2}{2}{section.2}}
 \backcite {cars}{{2}{2}{section.2}}
@@ -34,13 +35,12 @@
 \backcite {nyc3d}{{2}{2}{section.2}}
 \backcite {rcnn}{{3}{4}{section.4}}
 \backcite {ning}{{3}{4}{section.4}}
-\backcite {branson}{{3}{4}{section.4}}
 \backcite {dpm}{{3}{4}{section.4}}
 \backcite {alexnet}{{3}{4}{section.4}}
 \backcite {alexnet}{{4}{4.2}{subsection.4.2}}
 \backcite {caffe}{{4}{4.2}{subsection.4.2}}
 \backcite {cal-traffic-study}{{5}{5.1.2}{subsubsection.5.1.2}}
-\backcite {ground_air}{{6}{10}{figure.10}}
-\backcite {air_quality_gov}{{7}{5.2.2}{subsubsection.5.2.2}}
+\backcite {ground_air}{{7}{11}{figure.11}}
+\backcite {ground_air}{{7}{5.2.2}{subsubsection.5.2.2}}
 \backcite {mit_plos_1}{{7}{5.3.1}{subsubsection.5.3.1}}
 \backcite {foreign_domestic}{{7}{5.3.2}{subsubsection.5.3.2}}
