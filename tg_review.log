@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2014.1.20)  13 NOV 2014 12:44
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2014.1.20)  14 NOV 2014 01:09
 entering extended mode
  %&-line parsing enabled.
 **tg_review.tex
@@ -268,18 +268,13 @@ File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
 
-<img/pull.jpg, id=7, 845.1575pt x 548.0475pt>
-File: img/pull.jpg Graphic file (type jpg)
- <use img/pull.jpg>
-<img/dataset_figure.jpg, id=8, 958.58125pt x 360.34625pt>
-File: img/dataset_figure.jpg Graphic file (type jpg)
+<img/pull.png, id=7, 560.0925pt x 374.90062pt>
+File: img/pull.png Graphic file (type png)
+ <use img/pull.png>
+<img/dataset_figure.png, id=8, 1631.34468pt x 711.4078pt>
+File: img/dataset_figure.png Graphic file (type png)
 
-<use img/dataset_figure.jpg>
-Underfull \hbox (badness 2875) in paragraph at lines 72--73
-\OT1/ptm/m/n/10 by Tor-ralba etal, Berg etal, and Hedalgo etal have
- []
-
-
+<use img/dataset_figure.png>
 Underfull \hbox (badness 2951) in paragraph at lines 72--73
 \OT1/ptm/m/n/10 re-cently started to ap-ply vi-sual scene anal-y-sis tech-
  []
@@ -297,190 +292,54 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 ) [1{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./img/pull.jpg>]
-Underfull \hbox (badness 5475) in paragraph at lines 82--85
-[]\OT1/ptm/b/n/10 City anal-y-sis via im-age fea-tures\OT1/ptm/m/n/10 . There h
-as
- []
+ <./img/pull.png (PNG copy)>]
+! Undefined control sequence.
+l.76 ...m a single source of data\textemdashGoogle
+                                                   Street View images, we ar...
 
-
-Underfull \hbox (badness 3108) in paragraph at lines 82--85
-\OT1/ptm/m/n/10 been re-cent in-ter-est in us-ing im-ages to char-ac-ter-ize
- []
-
-
-Underfull \hbox (badness 1087) in paragraph at lines 82--85
-\OT1/ptm/m/n/10 much more ex-ten-sive so-cial and de-mo-graphic anal-y-sis
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--85
-
- []
-
-
-Underfull \hbox (badness 3826) in paragraph at lines 82--85
-\OT1/ptm/b/n/10 Fine-grained ob-ject recog-ni-tion\OT1/ptm/m/n/10 . Fine-graine
-d ob-
- []
-
-
-Underfull \hbox (badness 1142) in paragraph at lines 82--85
-\OT1/ptm/m/n/10 works such as  [[]][] [[]][] show im-pres-sive re-sults by
- []
-
-
-Underfull \hbox (badness 1769) in paragraph at lines 82--85
-\OT1/ptm/m/n/10 fine-grained clas-si-fi-ca-tion ac-cu-racy since there are no
- []
-
-
-Underfull \hbox (badness 5504) in paragraph at lines 82--85
-\OT1/ptm/m/n/10 fine-grained datasets that match ob-ject clas-si-fi-ca-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--85
-
- []
-
-<img/car_hierarchy.jpg, id=75, 493.845pt x 286.06876pt>
-File: img/car_hierarchy.jpg Graphic file (type jpg)
-
-<use img/car_hierarchy.jpg> <img/web.jpg, id=76, 894.34125pt x 678.535pt>
-File: img/web.jpg Graphic file (type jpg)
-
-<use img/web.jpg> <img/street.jpg, id=77, 898.35625pt x 682.55pt>
-File: img/street.jpg Graphic file (type jpg)
-
-<use img/street.jpg> <img/bbox_figure.pdf, id=78, 766.08627pt x 328.95682pt>
-File: img/bbox_figure.pdf Graphic file (type pdf)
-
-<use img/bbox_figure.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2 <./img/dataset_figure.jpg>]
-Underfull \hbox (badness 1565) in paragraph at lines 144--145
-[]\OT1/ptm/m/n/10 Although RCNN based fine-grained de-tec-tion al-go-
- []
-
-
-Underfull \vbox (badness 6047) has occurred while \output is active []
-
- [3 <./img/car_hierarchy.jpg> <./img/web.jpg> <./img/street.jpg> <./img/bbox_fi
-gure.pdf
-
-pdfTeX warning: pdflatex (file ./img/bbox_figure.pdf): PDF inclusion: Page Grou
-p detected which pdfTeX can't handle. Ignoring it.
->] <img/submodel_confusion.png, id=138, 479.8728pt x 368.577pt>
-File: img/submodel_confusion.png Graphic file (type png)
-
-<use img/submodel_confusion.png>
-<img/good_det.png, id=139, 863.225pt x 575.14874pt>
-File: img/good_det.png Graphic file (type png)
- <use img/good_det.png>
-<img/cars.jpg, id=140, 501.875pt x 554.07pt>
-File: img/cars.jpg Graphic file (type jpg)
- <use img/cars.jpg>
-
-LaTeX Warning: Reference `fig:good_dets' on page 4 undefined on input line 192.
-
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4 <./img/submodel_confusion.png> <./img/good_det.png> <./img/cars.jpg>]
-<img/averagePriceIncome.png, id=161, 602.25pt x 451.6875pt>
-File: img/averagePriceIncome.png Graphic file (type png)
-
-<use img/averagePriceIncome.png>
-<img/boston_make_corr.png, id=162, 459.1554pt x 370.5042pt>
-File: img/boston_make_corr.png Graphic file (type png)
-
-<use img/boston_make_corr.png>
-<img/boston_acura_corr.png, id=163, 493.3632pt x 400.8576pt>
-File: img/boston_acura_corr.png Graphic file (type png)
-
-<use img/boston_acura_corr.png>
-<img/boston_bmw_corr.png, id=164, 492.8814pt x 402.303pt>
-File: img/boston_bmw_corr.png Graphic file (type png)
-
-<use img/boston_bmw_corr.png>
-<img/income_price.png, id=169, 1058.45438pt x 614.295pt>
-File: img/income_price.png Graphic file (type png)
-
-<use img/income_price.png> <img/mpg.png, id=171, 1122.44344pt x 691.83469pt>
-File: img/mpg.png Graphic file (type png)
-
-<use img/mpg.png> [5 <./img/averagePriceIncome.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <./img/boston_make_corr.png> <./img/boston_acura_corr.png> <./img/boston_bm
-w_corr.png> <./img/income_price.png (PNG copy)>]
-<img/moran.png, id=207, 497.60907pt x 328.22626pt>
-File: img/moran.png Graphic file (type png)
- <use img/moran.png>
-Underfull \hbox (badness 1521) in paragraph at lines 322--323
-\OT1/ptm/m/n/10 Which city has the most ex-pen-sive cars on av-er-age?
- []
-
-<img/city_foreign_new.png, id=211, 795.97375pt x 407.5225pt>
-File: img/city_foreign_new.png Graphic file (type png)
-
-<use img/city_foreign_new.png>
-<img/foreign.png, id=212, 356.83313pt x 173.89969pt>
-File: img/foreign.png Graphic file (type png)
- <use img/foreign.png>
-<img/city_price_new.png, id=213, 842.14626pt x 415.5525pt>
-File: img/city_price_new.png Graphic file (type png)
-
-<use img/city_price_new.png> [7 <./img/mpg.png (PNG copy)> <./img/moran.png>]
-(./tg_review.bbl (./tg_review.brf)
-\tf@brf=\write3
-\openout3 = `tg_review.brf'.
-
-
-Underfull \vbox (badness 1087) has occurred while \output is active []
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
- [8 <./img/city_foreign_new.png (PNG copy)> <./img/foreign.png (PNG copy)> <./i
-mg/city_price_new.png (PNG copy)>]
-Underfull \hbox (badness 3189) in paragraph at lines 113--113
-[]\OT1/ptm/m/n/9 N. Naik, J. Philipoom, R. Raskar, and C. Hi-dalgo.
- []
-
-) [9] (./tg_review.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+? X
+ 
 Here is how much of TeX's memory you used:
- 4120 strings out of 256216
- 54317 string characters out of 1917072
- 119939 words of memory out of 1500000
- 7232 multiletter control sequences out of 10000+200000
- 32496 words of font info for 72 fonts, out of 1200000 for 2000
+ 3806 strings out of 256216
+ 49947 string characters out of 1917072
+ 116471 words of memory out of 1500000
+ 7018 multiletter control sequences out of 10000+200000
+ 28209 words of font info for 63 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 35i,9n,27p,1302b,453s stack positions out of 5000i,500n,6000p,200000b,15000s
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/b
-luesky/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi7.pfb></usr/s
-hare/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/blues
-ky/cm/cmr7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/
-texmf/fonts/type1/bluesky/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/tex
--gyre/qplr.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/shar
-e/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf/fonts/type1/urw/t
-imes/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/
-texmf/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tg_review.pdf (9 pages, 8659043 bytes).
+ 32i,9n,25p,1208b,336s stack positions out of 5000i,500n,6000p,200000b,15000s
+pdfTeX warning (dest): name{cite.car_stats} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.tamara} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.mit_cvpr} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.mcdonalds} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.antonio} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.ngrams} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.nlp_people} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.jure} has been referenced but does not exist, 
+replaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/blu
+esky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/sha
+re/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/urw/
+helvetic/uhvr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/sh
+are/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/ti
+mes/utmri8a.pfb>
+Output written on tg_review.pdf (1 page, 909746 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
- 78 named destinations out of 1000 (max. 131072)
- 112 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 PDF objects out of 1000 (max. 8388607)
+ 12 named destinations out of 1000 (max. 131072)
+ 27 words of extra memory for PDF output out of 10000 (max. 10000000)
 

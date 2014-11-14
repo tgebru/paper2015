@@ -10,50 +10,52 @@ Warning--entry type for "ground_air" isn't style-file defined
 --line 198 of file egbib.bib
 Warning--entry type for "foreign_domestic" isn't style-file defined
 --line 206 of file egbib.bib
+Warning--I didn't find a database entry for "gist"
+Warning--I didn't find a database entry for "cnn"
 Warning--empty journal in mcdonalds
 Warning--empty year in mcdonalds
 Warning--empty journal in cars
 Warning--empty year in cars
 Warning--empty journal in birds
-You've used 26 entries,
+You've used 25 entries,
             2120 wiz_defined-function locations,
-            627 strings with 8380 characters,
-and the built_in function-call counts, 10436 in all, are:
-= -- 1007
-> -- 579
+            625 strings with 8213 characters,
+and the built_in function-call counts, 10165 in all, are:
+= -- 983
+> -- 561
 < -- 10
-+ -- 230
-- -- 202
-* -- 722
-:= -- 1669
-add.period$ -- 81
-call.type$ -- 26
-change.case$ -- 178
++ -- 223
+- -- 196
+* -- 708
+:= -- 1623
+add.period$ -- 78
+call.type$ -- 25
+change.case$ -- 172
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 395
-empty$ -- 771
-format.name$ -- 202
-if$ -- 2229
+cite$ -- 30
+duplicate$ -- 388
+empty$ -- 749
+format.name$ -- 196
+if$ -- 2172
 int.to.chr$ -- 0
-int.to.str$ -- 26
+int.to.str$ -- 25
 missing$ -- 21
-newline$ -- 127
-num.names$ -- 52
-pop$ -- 242
+newline$ -- 122
+num.names$ -- 50
+pop$ -- 232
 preamble$ -- 1
-purify$ -- 152
+purify$ -- 147
 quote$ -- 0
-skip$ -- 303
+skip$ -- 295
 stack$ -- 0
-substring$ -- 551
-swap$ -- 124
+substring$ -- 546
+swap$ -- 123
 text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 104
+type$ -- 100
 warning$ -- 5
-while$ -- 88
-width$ -- 28
-write$ -- 270
-(There were 9 warnings)
+while$ -- 86
+width$ -- 27
+write$ -- 261
+(There were 11 warnings)

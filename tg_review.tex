@@ -16,7 +16,7 @@
 
 % \cvprfinalcopy % *** Uncomment this line for the final submission
 
-\def\cvprPaperID{****} % *** Enter the CVPR Paper ID here
+\def\cvprPaperID{1611} % *** Enter the CVPR Paper ID here
 \def\httilde{\mbox{\tt\raisebox{-.5ex}{\symbol{126}}}}
 
 % Pages are numbered in submission mode, and unnumbered in camera-ready
@@ -47,41 +47,39 @@ First line of institution2 address\\
 
 %%%%%%%%% ABSTRACT
 \begin{abstract}
-Detecting a large number of BMWs in images informs us that those images may be of a wealthy area. Conversely, knowing that our images were obtained from a wealthy neighborhood increases the likelihood of detecting expensive cars. We explore this relationship between demographic factors and fine-grained classes by performing large scale detection of over 2600 car classes and conducting a social analysis of unprecedented scale in computer vision. Using 45 million images from 200 of the biggest cities in the United States, we predict demographic factors such as neighborhood wealth, education levels and show that our results correlate well with census data. To facilitate our work, we have collected the largest and most challenging fine-grained dataset reported to date consisting of over 2500 classes of cars comprised of images from google street view and other web sources and classified by car experts to account for even the most subtle of visual differences. We hope our work ushers in a new research area fusing fine-grained object detection and societal analysis.
+Detecting a large number of BMWs in images informs us that those images may be of a wealthy area. Conversely, knowing that our images were obtained from a wealthy neighborhood increases the likelihood of detecting expensive cars. We explore this relationship between demographic factors and fine-grained classes by performing large scale detection of over 2600 car classes and conducting a social analysis of unprecedented scale in computer vision. Using 45 million images from 200 of the biggest cities in the United States, we predict demographic factors such as neighborhood wealth, education levels and show that our results correlate well with census data. To facilitate our work, we have collected the largest and most challenging fine-grained dataset reported to date consisting of over 2600 classes of cars comprised of images from google Street View and other web sources,classified by car experts to account for even the most subtle of visual differences. 
 \end{abstract}
 
 \section{Introduction}
 \begin{figure}[t]
 \begin{center}
-   \includegraphics[width=1\linewidth]{img/pull.jpg}
+   \includegraphics[width=1\linewidth]{img/pull.png}
 \end{center}
-   \caption{Cars on the street provide information about people and their neighborhoods. Without location information, we can guess that images from the first column are from wealthy areas where as those from the second column are from poorer neighborhoods.}
+   \caption{Look at the car on the {\em left}. It is a Prius 2012. From the car only, can you guess where the owner lives and drives the car? What his or her highest degree is? And what is the household income of the owner? A car can tell us a thousand things, as it turns out. In this paper, we combine results from a fine-grained car detection algorithm with a number of social census data provided by the U.S. government, and are able to infer that Prius is the most popular car in the city of San Francisco, its owner often holds a college degree and has a household income of \$30,000 ({\em right})}
 \label{fig:pull}
 \end{figure}
 
 %%%%%%%%% BODY TEXT
 \begin{figure*}[t]
 \begin{center}
-   \includegraphics[width=1\linewidth]{img/dataset_figure.jpg}
+   \includegraphics[width=1\linewidth]{img/dataset_figure.png}
 \end{center}
-   \caption{Left: examples of cars from craigslist, cars.com and edmunds.com, Right: examples of cars from streetview images. Cars from streetview images are blurred and occluded.}
+   \caption{Examples of cars from our fine-grained dataset. Left: examples of cars from edmunds.com, cars.com and craigslist.com. Right: examples of cars from streetview images. Cars from streetview images tend to be lower resolution and are often occluded where as those from other sources are typically unoccluded and centered in the image.}
 \label{fig:dataset1}
 \end{figure*}
-The artifacts with which we choose to surround ourselves tell us not only about ourselves but also about the society in which we live. In the 21st century, some of the most relevant objects defining people and their lifestyles are houses, clothes and cars. From a single picture such as fig.~\ref{fig:pull}a of an individual with their car, we can guess that the person is rich because they own a tesla, and that they probably care about the environment. Similarly, it is evident that figs.~\ref{fig:pull} b and c are of poorer neighborhoods where as figs.~\ref{fig:pull}1 and b are that of wealthy ones. Traditionally, the most prevalent method for gathering such personal and demographic information is through surveys such as census and American community survey (ACS) projects. However, the emergence of big and diverse sets of data generated by people has enabled computer scientists and computational sociologists to gain interesting insights by analyzing massive user texts and social networks~\cite{jure}~\cite{nlp_people}. For example, recent work from~\cite{ngrams} analyzed \(\sim 1\)M books and presented results related to the evolution of the english language as well as various cultural phenomena.
+The artifacts which we choose to surround ourselves with tell us not only about ourselves but also about the society in which we live. In the 21st century, some of the most relevant objects defining people and their lifestyles are houses, clothes and cars. From a single figure such as fig.~\ref{fig:pull} of cars on the street, we can infer that the images in the first column are from wealthy neighborhoods where as those in the second column are from poor areas. We can also guess that the person next to the Tesla in Fig.~\ref{fig:pull} is wealthy and liberal. Traditionally, the most prevalent method for gathering such personal and demographic information is through surveys such as census and American community survey (ACS) projects. However, the emergence of large and diverse sets of data generated by people has enabled computer scientists and computational sociologists to gain interesting insights by analyzing massive user texts and social networks~\cite{jure}~\cite{nlp_people}. For example, recent work from~\cite{ngrams} analyzed \(\sim 1\)M books and presented results related to the evolution of the English language as well as various cultural phenomena.
 
-On the computer vision side, a few pioneering works by Torralba etal, Berg etal, and Hedalgo etal have recently started to apply visual scene analysis techniques to infer characteristics of neighborhoods and cities~\cite{antonio}~\cite{mcdonalds}~\cite{mit_cvpr}~\cite{tamara}.In this work, we are also interested in using images to understand cities, neighborhoods and the demographic makeup of their inhabitants. However, instead of using global image statistics, we achieve this goal by detecting and classifying cars on the street. 95\% of American households own cars~\cite{car_stats}, and as seen in fig.~\ref{fig:pull} cars give a lot of information about individuals as well as neighborhoods.
+On the computer vision side, a few pioneering works by Torralba et al, Berg et al, and Hedalgo et al have recently started to apply visual scene analysis techniques to infer characteristics of neighborhoods and cities~\cite{antonio}~\cite{mcdonalds}~\cite{mit_cvpr}~\cite{tamara}. In this work, we are also interested in using images to understand cities, neighborhoods and the demographic makeup of their inhabitants. However, instead of using global image statistics, we achieve this goal by detecting and classifying cars on the street. 95\% of American households own cars~\cite{car_stats}, and as seen in fig.~\ref{fig:pull} cars give a lot of information about individuals as well as neighborhoods. By using cars as a lens into understanding society, we are able to gain insights ranging from the demographic makeup of cities to neighborhood pollution levels.
 
-Our contributions are two-fold. First, we offer a fine-grained car dataset of unprecedented scale. It has 2657 car classes consisting of nearly all car types produced in the world after 1990: with a total of \(\sim 700\)k images from websites such as edmunds.com, cars.com, craigslist.com and street view (fig.~\ref{fig:dataset1}). Our testing dataset for social analysis consists of more than 45 million google street view images from 200 of the largest American cities and 2519 zip codes where an average of \(\sim\)18k images is collected for each zip code.
+Our contributions are two-fold. First, we offer a fine-grained car dataset of unprecedented scale. It has 2657 car classes consisting of nearly all car types produced in the world after 1990: with a total of 700,000 images from websites such as edmunds.com, cars.com, craigslist.com and Google Street View (Fig.~\ref{fig:dataset1}). We use our dataset to train a large scale fine-grained detection system, detecting cars in more than 45,000,000 Google Street View images collected from 200 of the largest American cities.
 
-Second, our paper offers a suite of interesting social analysis of American people and cities using a large scale fine-grained object detection system. This work is only possible because of the tremendous progress in object recognition: particularly object detection and fine-grained object recognition. We use DPM~\cite{dpm}~\cite{dpm_web} to detect cars due to scalability concerns and train a CNN~\cite{alexnet} to classify them into one of 2567 classes. Using the result of our detections, we are able to offer insights into a number of very interesting questions related to our lives, communities and cities. Section~\ref{sec:social} shows a series of analyses about how the types of cars we drive relate to our level of education, wealth and the neighborhoods and cities we live in and section~\ref{sec:prior} presents preliminary results in exploring the use of demographic information to improve gine-grained car classification.
-
-
-
+Second, we present a suite of interesting social analysis of American people and cities using our car detections. In Section~\ref{sec:social}, we show that from a single source of data, Google Street View images, we are able to predict diverse sets of important societal information typically gathered by different entities. We not only show good correlation with census data related to demographics, but can also predict information not present in census data such as neighborhood pollution levels. Finally, Section~\ref{sec:prior} presents preliminary results in exploring the use of demographic information to improve fine-grained car classification.
 %------------------------------------------------------------------------
 \section{Related Work}
-\textbf{City analysis via image features}. There has been recent interest in using images to characterize cities~\cite{mit_plos_1}~\cite{tamara}~\cite{paris}~\cite{antonio}~\cite{mit_cvpr}~\cite{mcdonalds}. ~\cite{mit_plos_1} created scores for perceptions of wealth, safety and uniqueness by asking people to rate images from 3 cities on a scale of 1\textendash10 and ~\cite{mit_cvpr}~\cite{tamara} predicted these scores using various global image features such as GIST and CNN. In another line of work analyzing cities, ~\cite{antonio} perform city identity recognition after representing each city with higher level attributes. ~\cite{paris} identify unique qualities of cities such as Paris and Prague and~\cite{mcdonalds} shows that given an image of a particular city location, it is possible to predict the most likely direction for the location of a McDonalds. While our work also shares the motive of city analysis through imagery, it differs in that we use fine-grained object recognition to achieve this goal. As shown in section~\ref{sec:social}, this allows us to perform much more extensive social and demographic analysis through imagery and also easily extend our analysis to many other cities without the need for additional labeling.\newline\newline
+\label{sec:related}
+\textbf{City analysis via image features}. There has been recent interest in using images to characterize cities~\cite{mit_plos_1}~\cite{tamara}~\cite{paris}~\cite{antonio}~\cite{mit_cvpr}~\cite{mcdonalds}. ~\cite{mit_plos_1} created scores for perceptions of wealth, safety and uniqueness by asking people to rate images from 3 cities on a scale of 1\textendash10 and ~\cite{mit_cvpr}~\cite{tamara} predicted these scores using various global image features such as GIST~\cite{gist} and CNN~\cite{cnn}. In another line of work analyzing cities, ~\cite{antonio} perform city identity recognition after representing each city with higher level attributes. Doersch et al~\cite{paris} identify unique qualities of cities such as Paris and Prague and~\cite{mcdonalds} shows that given an image of a particular city location, it is possible to predict the most likely direction for the location of a McDonalds. While our work also shares the motive of city analysis through imagery, it differs in that we use fine-grained object recognition to achieve this goal. As shown in section~\ref{sec:social}, this allows us to perform much more extensive social and demographic analysis through imagery and also easily extend our analysis to many other cities without the need for additional labeling. \newline\newline
 \textbf{Fine-grained object recognition}. Fine-grained object recognition is a difficult problem due to the high visual similarity between classes. Nevertheless, recent works such as ~\cite{ning}~\cite{cars} show impressive results by using part annotated datasets such as ~\cite{birds}~\cite{dogs}~\cite{cars} and augmenting state of the art object detection algorithms such as RCNN~\cite{rcnn}. However, it is difficult to evaluate fine-grained classification accuracy since there are no fine-grained datasets that match object classification datasets like imagenet~\cite{imagenet} in the number of classes or images. Recent works such as~\cite{birdsnap} have introduced larger scale fine-grained datasets and ~\cite{nyc3d} has introduced a 3D car dataset annotated with metadata such as location information. We introduce a geotagged car dataset with unprecedented scale in both the number of classes and images.\newline\newline
-\textbf{Using GPS data to improve classification}. Although an increasing number of images that we interact with daily are associated with GPS tags, there are very few computer vision algorithms that take advantage of location based metadata. However, recent works such as~\cite{amir} use location information to assist in detecting objects such as trash cans and street lamps,~\cite{birdsnap} learns a spatio-temporal prior to improve bird classification and~\cite{nyc3d} uses some location information such as elevation to assist in car classification. 
+\textbf{Using GPS data to improve classification}. Although an increasing number of images that we interact with daily are associated with GPS tags, there are very few computer vision algorithms that take advantage of location based metadata. However, recent works such as~\cite{amir} use location information to assist in detecting objects such as trash cans and street lamps,~\cite{birdsnap} learns a spatio-temporal prior to improve bird classification and~\cite{nyc3d} uses some location information such as elevation to assist in car classification. Following the work of~\cite{birdsnap}, we explore the use of demographic data to improve fine-grained classification.
 
 %------------------------------------------------------------------------
 %\begin{figure} [t]
@@ -94,13 +92,13 @@ Second, our paper offers a suite of interesting social analysis of American peop
 
 \begin{figure*} [t]
 \begin{center}
-\raisebox{0.5\height}{
-  \includegraphics[width=0.25\linewidth]{img/car_hierarchy.jpg}
-}
-\includegraphics[width=0.32\linewidth]{img/web.jpg}
-\includegraphics[width=0.32\linewidth]{img/street.jpg}
+%\raisebox{0.5\height}{
+  \includegraphics[width=1\linewidth]{img/car_hierarchy.png}
+%}
+%\includegraphics[width=0.32\linewidth]{img/web.jpg}
+%\includegraphics[width=0.32\linewidth]{img/street.jpg}
 \end{center}
-\caption {Left: A hierarchy of car classes where images become more difficult to distinguish while travelling down the tree.The leaves (e.g. class 1 and class 2) are the fine-grained classes. Center: Class image distribution for web images. We have the most number of images for 2001-2003 Hyundai Elatra sedan glx and the least for 1990-1992 Audi 80 sedan base. Right: class image distribution for street view images.}
+\caption {Left: A hierarchy of car classes in our dataset. Classes become more difficult to distinguish lower in the hierarchy, with differences extremely subtle at the year and trim level. Center: The number of images per class obtained from edmunds.com, cars.com, and craigslist.com. Right: The number of images per class from Street View.}
 \label{fig:img_dist}
 \end{figure*}
 
@@ -109,35 +107,33 @@ Second, our paper offers a suite of interesting social analysis of American peop
 \begin{figure}[t]
 \begin{center}
    %\includegraphics[width=0.45\linewidth]{img/loc_prior.png}
-   \includegraphics[width=1\linewidth]{img/bbox_figure.pdf}
+   \includegraphics[width=1\linewidth]{img/bbox_figure.png}
 \end{center}
-   \caption{Left: Location/scale heatmap of streetview bounding boxes with red indicating larger sizes and blue smaller ones. Each point indicates the size of a bounding box centered at that point in a street view image.}
-   \caption{Right: Heatmap of streetview bounding box locations. Most cars are located in a line slightly below the center of the image.}
+   \caption{(a) Heatmap of bounding box scale. Each point represents a single bounding box from Street View. The color of each point color indicates the area, with red higher area. The magnitude at each point indicates the size of a bounding box centered at that location in a Street View image. (b) Heatmap of Street View bounding box coverage in an image. The magnitude at each point indicates the number of bounding boxes that include that point.}
 \label{fig:loc-heat}
 \end{figure}
 
 \begin{table}
 \begin{center}
-\begin{tabular}{|l|c|c|r|}
+\begin{tabular}{|l|c|c|c|}
 \hline
-\textbf{Attribute} & \textbf{Train} & \textbf{Val} & \textbf{Test} \\
+\textbf{Attribute} & \textbf{Training} & \textbf{Validation} & \textbf{Test} \\
 \hline\hline
-No. streetview bboxes & 34,712 & 6,915 &27,865\\
-No. web bboxes & 313,099 & - &-\\
-No. web images & 313,099 & - &-\\
-No. streetview images & 199,666 & 39,933 &159,732\\
-No. Total images &512,765&39,933&159,732\\
-No. classes & 2657 & - & -\\
-No. car types & 18017 & - & -\\
+Street View Images & 199,666 & 39,933 &159,732\\
+Street View BBoxes & 34,712 & 6,915 &27,865\\
+Product Shot Images & 313,099 & - &-\\
+Product Shot BBoxes & 313,099 & - &-\\
+Total Images &512,765&39,933&159,732\\
 \hline
 \end{tabular}
 \end{center}
-\caption{Street view data statistics}
-\label{table:data}
+\caption{Dataset statistics for our training, validation, and test splits. ``BBox'' is shorthand for Bounding Box. Product shot bounding boxes and images are from craigslist.com, cars.com and edmunds.com.}
 \end{table}
-We first collected 45 million images from 8 million GPS points by sampling the roads of 200 of the biggest US cities every 25m. For each GPS coordinate we gathered street view images at 0, 60, 120, 180, 240, 300 degree rotations. In order to train a fine-grained car classifier to detect and classify the cars in our images, we created the largest ever reported fine-grained dataset of cars consisting of all the cars listed on edmunds.com (all cars manufactured after 1990). To assemble our car dataset we obtained images of all cars in edmunds.com (\(\sim18k\)cars) and grouped the cars into visually indistinguishable classes using a series of amazon mechanical turk tasks. After creating a class list, we collected additional images of cars from cars.com as well as craigslist and used AMT to annotate them with bounding boxes. Finally, we hired car experts to label \(\sim 70\)k bounding boxes of cars from the street view images with fine-grained lables. We also labeled cars from craigslist and cars.com by parsing the car posting titles. 
 
-Table~\ref{table:data} summarizes the statistics of our dataset and fig.~\ref{fig:dataset1}a shows some examples. We can see that cars from street view images are generally occluded and blurry where as those from other web sources have higher resolution. As seen in fig.~\ref{fig:loc-heat}, the street view bounding boxes are distributed in a line around the center of the image and bounding boxes near the center also occupy a larger space. Fig.~\ref{fig:img_dist}a, shows a hierarchy of classes in our dataset where classes become increasingly visually indistinguishable while traveling down the tree. As the figure shows, the difference between leaf classes such as class 1 and class 2 is extremely subtle. Finally fig.~\ref{fig:img_dist}a and b show the distribution of street view and web images for different classes. 
+We collected 45 million images from 8 million GPS points by sampling the roads of 200 of the biggest US cities every 25m. For each GPS coordinate we gathered Street View images at 0, 60, 120, 180, 240, 300 degree rotations. In order to train a fine-grained car classifier to detect and classify the cars in our images, we created the largest ever reported fine-grained dataset of cars consisting of all the cars listed on a prominent car information website: edmunds.com (all cars manufactured after 1990). To assemble our car dataset we obtained images of all cars in edmunds.com (\(\sim\)18k cars) and grouped the cars into visually indistinguishable classes using a series of amazon mechanical turk tasks. After creating a class list, we collected additional images of cars from cars.com as well as craigslist and used AMT to annotate them with bounding boxes. Finally, we hired car experts to label \(\sim 70\)k bounding boxes of cars from the street view images with fine-grained lables. We also labeled cars from craigslist.com and cars.com by parsing the car posting titles. 
+
+
+Table~\ref{table:data} summarizes the statistics of our dataset, Fig.~\ref{fig:dataset1} shows example images and Fig.~\ref{fig:loc-heat} visualizes the location and scale of car bounding boxes in the Street View images. As seen in Fig.~\ref{fig:loc-heat} and Fig.~\ref{fig:dataset1}, Street View images typically contain multiple cars per image where as images from sources such as craigslist.com contain one car per image. Bounding boxes from Street View images can also be located in many parts of the image, have a large range of sizes and are typically blurry and occluded. These  aspects of our dataset differentiate our data from other fine-grained datasets such as~\cite{birds} containing one centered and focused object per image. Fig.~\ref{fig:img_dist}a, shows a hierarchy of classes in our dataset where classes become increasingly visually indistinguishable while traveling down the tree. It can be seen that the difference between the fine-grained classes in our dataset is extremely subtle making it difficult for non-expert humans to distinguish. Finally Figs.~\ref{fig:img_dist}a and b show the distribution of Street View images and product shots (images from craigslist.com, cars.com and edmunds.com) for different classes. The image/class distribution for images from the 3 websites is very different from that of the Street View images. By collecting images from different sources we minimize the amount of bias present in our dataset.
 
 \section{Detecting and classifying cars}
 \label{sec:detection}
@@ -151,19 +147,19 @@ Inorder to evaluate accuracy/speed trade off, we trained DPMS with different num
 \begin{center}
 \begin{tabular}{|l|c|}
 \hline
-\textbf{Attribute} & \textbf{Acc\%} \\
+\textbf{Attribute} & \textbf{Accuracy} \\
 \hline\hline
-Make & 66.38 \\
-Model & 51.83 \\
-Submodel & 77.74 \\
+Make & 66.38\%\\
+Model & 51.83\% \\
+Submodel & 77.74\% \\
 %Year (5 bins) & X \\
-Price (5 bins)& 61.61 \\
-Domestic/Foreign & 87.71\\
-Country & 84.21\\
+Price & 61.61\% \\
+Domestic/Foreign & 87.71\%\\
+Country & 84.21\%\\
 \hline
 \end{tabular}
 \end{center}
-\caption{Accuracy by car attribute}
+\caption{Classification accuracy on the test set for various car attributes.}
 \label{table:att-acc}
 \end{table}
 
@@ -172,24 +168,24 @@ Country & 84.21\\
    %\includegraphics[width=1\linewidth]{img/price_confusion.png}
    \includegraphics[width=1\linewidth]{img/submodel_confusion.png}
 \end{center}
-   \caption{Confusion matrix for car submodel. As expected, the confusion is between similar types of submodels such as a sedan and coupe or an extended cab and a crew-cab.} 
+   \caption{Confusion matrix for car body types. Most misclassifications are between similar types of submodels such as sedans and coupes or extended cabs and a crew cabs (different types of trucks).} 
 \label{fig:confusion}
 \end{figure}
 
 \begin{figure} [t]
 \begin{center}
-\includegraphics[width=0.55\linewidth]{img/good_det.png}
-\raisebox{-0.02\height}
- {
-\includegraphics[width=0.34\linewidth]{img/cars.jpg}
- }
+\includegraphics[width=1\linewidth]{img/good_det.png}
+%\raisebox{-0.02\height}
+% {
+%\includegraphics[width=0.34\linewidth]{img/cars.jpg}
+% }
 \end{center}
-\caption {An example of our car detections and classifications. The red boxes are DPM bounding boxes that are not classified by our CNN and green boxes are boxes classifyied by the CNN. The two cars in the image are correctly classified to the classes shown on the right.}
+\caption {An example of our car detections and classifications. The two cars in the image are correctly detected and classified as the classes shown on the right.}
 \label{fig:dets}
 \end{figure}
 
 \subsection{Car Classification}
-We use a standard CNN from ~\cite{alexnet} with ~\cite{caffe} to classify the DPM detections into one of 2657 fine-grained classes. Although our test set consists of street view images, as mentioned in sec.~\ref{sec:data} 61\% of our positive training images are composed of cars from other sources such as craigslist. Thus we add deformations such as blurring to these images during training to liken them to street view images. We give details of training the CNN in our supplementary material. At test time we take the top 10\% scoring DPM bounding boxes and classify them. This results in a 10x increase in speed but only a \(\sim\)2\% drop in AP as compared to using all the bounding boxes detected by DPM. We achieve an accuracy of 33.1\% on the true positive DPM bounding boxes and 31.27\% on the ground truth bounding boxes. Fig.~\ref{fig:good_dets} shows an example of our street view detections. The cars are detected and classified correctly even though blurriness and occlusions in street view images makes this a difficult task. Fig.~\ref{fig:confusion} shows a confusion matrix for submodel level classifications. It can be seen that most of the errors are between highly similar submodels such as sedan and coupe.   
+We use a standard CNN from ~\cite{alexnet} with ~\cite{caffe} to classify the DPM detections into one of 2657 fine-grained classes. Although our test set consists of street view images, as mentioned in sec.~\ref{sec:data} 61\% of our positive training images are composed of cars from other sources such as craigslist. Thus we add deformations such as blurring to these images during training to liken them to street view images. We give details of training the CNN in our supplementary material. At test time we take the top 10\% scoring DPM bounding boxes and classify them. This results in a 10x increase in speed but only a \(\sim\)2\% drop in AP as compared to using all the bounding boxes detected by DPM. We achieve an accuracy of 33.15\% on the true positive DPM bounding boxes and 31.27\% on the ground truth bounding boxes. Fig.~\ref{fig:dets} shows an example of our Street View detections. The cars are detected and classified correctly even though blurriness and occlusions in street view images makes this a difficult task. Fig.~\ref{fig:confusion} shows a confusion matrix for submodel level classifications. It can be seen that most of the errors are between highly similar submodels such as sedan and coupe.   
 
 \subsection{Analyzing Hierarchical Classification Accuracy}
 Some types of classification mistakes are more costly than others for the task of social analysis. For example, an error misclassifying 2001 Honda Accord lx to 2001 Honda Accord dx is not significant. However, misclassifying a 2012 BMW 3-series to a 1996 Honda Accord,for example, would create large errors in an analysis measuring the realtionship between the average car price or age in a zip code and median household income. In order to gain more insight into the types of errors our classifier makes, we measure the accuracy of classifying different car attributes. Table~\ref{table:att-acc} lists accuracies by various car attributes such as those in fig.~\ref{fig:img_dist}a and others like car price, year etc\ldots We can see that the accuracy is much higher after aggregating by different attributes.  
@@ -208,15 +204,15 @@ After establishing a high correlation between the number of cars we detect and t
 \begin{center}
 \begin{tabular}{|l|c|r|}
 \hline
-\textbf{Census Variable} & \textbf{Car Attribute} & \textbf{r}  \\
+\textbf{Census Variable} & \textbf{Car Attribute} & \textbf{Pearson r}  \\
 \hline\hline
-Household income & No. 1990-1994 cars & -0.42 \\
-Household income & No. 1995-1999 cars & -0.40 \\
-Household income & No. 2000-2004 cars & 0.21 \\
-Household income & No. 2005-2009 cars & 0.46 \\
-Household income & \% foreign cars & 0.59 \\
-Household income & \% German cars & 0.57 \\
-Household income & \% Us cars & -0.59 \\
+Household income & \# 1990-1994 cars & -0.42 \\
+Household income & \# 1995-1999 cars & -0.40 \\
+Household income & \# 2000-2004 cars & 0.21 \\
+Household income & \# 2005-2009 cars & 0.46 \\
+Household income & \% of foreign cars & 0.59 \\
+Household income & \% of German cars & 0.57 \\
+Household income & \% of US cars & -0.59 \\
 Household income & Avg. price & 0.49 \\
 Education: highschool & Avg. price & -0.21 \\
 Education: college & Avg. price & 0.32 \\
@@ -224,7 +220,7 @@ Education: graduate scl. & Avg. price & 0.39 \\
 \hline
 \end{tabular}
 \end{center}
-\caption{Pearson correlation coefficient between various census variables and detected car attributes. All p values are \(\sim\) 0.}
+\caption{Pearson correlation coefficient between various census variables and detected car attributes. All p values are \(\ll\) 0.01.}
 \label{table:car-census-corrs}
 \end{table}
 
@@ -232,23 +228,23 @@ Education: graduate scl. & Avg. price & 0.39 \\
 \begin{center}
    \includegraphics[width=0.9\linewidth]{img/averagePriceIncome.png}
 \end{center}
-   \caption {Scatter plot of median household income per zip code vs. average price of detected cars per zip code.}
+   \caption {Scatter plot of average price of detected cars per zip code vs. median household income per zip code for all zip codes in our dataset.}
 \label{fig:price-income-corr}
 \end{figure}
 
 \begin{figure*} [t]
 \begin{center}
-\raisebox{-0.03\height}{
-\includegraphics[width=0.3\linewidth]{img/boston_make_corr.png}
-}
-%\raisebox{0.3\height}{
-  \includegraphics[width=0.3\linewidth]{img/boston_acura_corr.png}
+%\raisebox{-0.03\height}{
+\includegraphics[width=1\linewidth]{img/boston_corr.png}
 %}
 %\raisebox{0.3\height}{
-\includegraphics[width=0.3\linewidth]{img/boston_bmw_corr.png}
+%  \includegraphics[width=0.3\linewidth]{img/boston_acura_corr.png}
+%}
+%\raisebox{0.3\height}{
+%\includegraphics[width=0.3\linewidth]{img/boston_bmw_corr.png}
 %}
 \end{center}
-\caption {Left: Pearson correlation coefficient and p values between the number of detected and registered cars in Boston for each make. Center: scatter plot of detected cars per zip code vs. registered cars per zip code in Boston. Left: scatter plot of No. of detected Honda's per zip code vs. registered Honda's per zip code in Boston.}
+\caption {Left: Pearson correlation coefficient between the number of detected and registered cars in Boston for each car make. Center: Scatter plot of detected BMWs per zip code vs. registered BMWs per zip code in Boston. Right: number of detected Honda's per zip code vs. registered Honda's per zip code in Boston.}
 \label{fig:ma_corrs}
 \end{figure*}
 
@@ -269,7 +265,7 @@ Poor people also live near very old cars where as rich people live near newer on
   %  \includegraphics[width=0.45\linewidth]{img/houston_income.png}
   %}
 \end{center}
-   \caption {Top left: Heat map of average car price in Boston, center: heat map of median household income in Boston. Bottom left: Heat map of average car price in Houston, center: heat map of median household income in Houston. Left example of street view images and car detections corresponding to zip codes with high and low incomes. Low income areas have many cheap cars where as high income areas have expensive ones.}
+   \caption {Left: Heat map of average household income per zip code obtained from census data. Center: Heat map of average car price per zip code detected from our data. Right: Example of Street View images and car detections corresponding to zip codes with high and low incomes respectively. We detect many cheap cars in low income areas and expensive cars in high income areas.}
 \label{fig:bos-sf-vis}
 \end{figure*}
 
@@ -289,7 +285,7 @@ As shown in \ref{table:car-census-corrs} there is a high negative correlation be
  %  \includegraphics[width=0.26\linewidth]{img/portland.png}
     \includegraphics[width=1\linewidth]{img/mpg.png}
 \end{center}
-   \caption {A. Density of cars in San francisco inversely weighted by their expected miles per gallon (MPG), B. The inverse of weighted average of car MPG in San Francisco. The weights are the expected number of cars in a GPS point, C. Ground Truth for Air quality (measured in annual particulate matter) in San Francisco from~\cite{ground_air}.}
+   \caption { Top right: Density of cars in San Francisco inversely weighted by their expected miles per gallon (MPG). Center: The inverse of weighted average of car MPG in San Francisco where the weights are the expected number of cars in a GPS point. Left: Ground Truth for Air quality (measured in annual particulate matter) in San Francisco from~\cite{ground_air}. Bottom: inverse weighted average of car MPG for 3 additional cities.}
 \label{fig:pollution}
 \end{figure}
 
@@ -309,9 +305,9 @@ Which cities show high clustering of similarly priced cars? Specifically, which 
 
 \begin{figure}[t]
 \begin{center}
-    \includegraphics[width=0.9\linewidth]{img/moran.png}
+    \includegraphics[width=1\linewidth]{img/moran.png}
 \end{center}
-   \caption {Moran I scores for car prices. The highest and lowest scoring cities are shown as well as 5 cities with scores in between. Reno exhibits the most amount of clustering by car price where as Dover exhibits very little clustering. The two maps for Boston and Dover show areas of high clustering where green indicates statistically significant clustering of expensive cars and red indicates statistically significant clustering of cheap cars.} 
+   \caption {Moran I scores for car prices in different cities. The highest and lowest scoring cities are shown as well as 5 cities with scores in between. Reno, NV exhibits the most amount of clustering by car price while Dover, CO exhibits very little clustering. The two maps for San Francisco and Boston show areas of high clustering where green indicates statistically significant clustering of expensive cars and red indicates statistically significant clustering of cheap cars.} 
 \label{fig:moran-i}
 \end{figure}
 
@@ -326,7 +322,7 @@ Which city has the most expensive cars on average? Fig.~\ref{fig:city_price}B ma
     \includegraphics[width=1\linewidth]{img/city_foreign_new.png}
     \includegraphics[width=1\linewidth]{img/foreign.png}
 \end{center}
-   \caption {Map of the percentage of foreign cars in each city. San Francisco has the highest percentage with (61\% and Casper the lowest with 21\%.} 
+   \caption {Map of the percentage of foreign cars in each American city. San Francisco, CA has the highest percentage with 61\% and Casper, WY the lowest with 21\%. The most popular cars in cities with the highest and lowest percentages as well as 2 others inbetween are listed.} 
 \label{fig:city_price}
 \end{figure}
 
@@ -334,7 +330,7 @@ Which city has the most expensive cars on average? Fig.~\ref{fig:city_price}B ma
 \begin{center}
     \includegraphics[width=1\linewidth]{img/city_price_new.png}
 \end{center}
-   \caption {Map of the United States showing the expected car price in each city. New York has the highest expected car price where as El Paso has the lowest.}
+   \caption {Map of the expected car price in each American city. New York, NY has the highest expected car price (\$11,829) while El Paso,TX has the lowest (\$7,079).}
 \label{fig:city_price}
 \end{figure}
 
@@ -342,18 +338,18 @@ Which city has the most expensive cars on average? Fig.~\ref{fig:city_price}B ma
 \begin{center}
 \begin{tabular}{|l|c|r|}
 \hline
-\textbf{Attribute} & \textbf{Census Variable}& \textbf{Acc\%}\\
+\textbf{Attribute} & \textbf{Census Variable}& \textbf{Acc. Gain}\\
 \hline\hline
-Price & Median hh income & 31.60\\
-Year  & Median hh income & 31.60\\
-Make & No. ppl in management & 31.57\\
-Submodel & Median hh income & 31.57\\
-Domestic & No. ppl in managemenet & 31.54\\
-Country & No. ppl in management & 31.54\\
+Price & Median hh income & 0.33\%\\
+Year  & Median hh income & 0.33\%\\
+Make & \#  ppl in management & 0.30\%\\
+Submodel & Median hh income & 0.30\%\\
+Domestic & \# ppl in management & 0.27\%\\
+Country & \# ppl in management & 0.27\%\\
 \hline
 \end{tabular}
 \end{center}
-\caption{Census variables resulting in the highest accuracy gain for each car attribute. Car price/year with median household income give the highest gain in accuracy.}
+\caption{Census variables resulting in the highest accuracy gain for each car attribute. ``hh'' is shorthand for house hold and ``ppl'' is shorthand for people. Using median household income as a prior for the car price or year results in the highest gain in accuracy.}
 \label{table:prior-acc}
 \end{table}
 

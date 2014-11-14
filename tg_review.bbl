@@ -49,11 +49,6 @@ R.~Girshick, J.~Donahue, T.~Darrell, and J.~Malik.
   segmentation.
 \newblock {\em arXiv preprint arXiv:1311.2524}, 2013.
 
-\bibitem{dpm_web}
-R.~B. Girshick, P.~F. Felzenszwalb, and D.~McAllester.
-\newblock Discriminatively trained deformable part models, release 5.
-\newblock http://people.cs.uchicago.edu/~rbg/latent-release5/.
-
 \bibitem{caffe}
 Y.~Jia, E.~Shelhamer, J.~Donahue, S.~Karayev, J.~Long, R.~Girshick,
   S.~Guadarrama, and T.~Darrell.
