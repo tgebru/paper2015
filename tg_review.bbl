@@ -5,6 +5,11 @@ S.~Ardeshir, A.~R. Zamir, A.~Torroella, and M.~Shah.
 \newblock Gis-assisted object detection and geospatial localization.
 \newblock In {\em Computer Vision--ECCV 2014}, pages 602--617. Springer, 2014.
 
+\bibitem{strong_DPM}
+H.~Azizpour and I.~Laptev.
+\newblock Object detection using strongly-supervised deformable part models.
+\newblock In {\em Computer Vision--ECCV 2012}, pages 836--849. Springer, 2012.
+
 \bibitem{ground_air}
 S.~Bay Area Air Quality Management~District.
 \newblock Average annual pm 2.5 concentration from all sources{@ONLINE}, June
@@ -15,6 +20,12 @@ T.~Berg, J.~Liu, S.~W. Lee, M.~L. Alexander, D.~W. Jacobs, and P.~N. Belhumeur.
 \newblock Birdsnap: Large-scale fine-grained visual categorization of birds.
 \newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2014 IEEE
   Conference on}, pages 2019--2026. IEEE, 2014.
+
+\bibitem{branson}
+S.~Branson, G.~Van~Horn, P.~Perona, and S.~Belongie.
+\newblock Improved bird species recognition using pose normalized deep
+  convolutional nets.
+\newblock In {\em British Machine Vision Conference}, 2014.
 
 \bibitem{car_stats}
 R.~Chase.
@@ -56,11 +67,6 @@ Y.~Jia, E.~Shelhamer, J.~Donahue, S.~Karayev, J.~Long, R.~Girshick,
 \newblock In {\em Proceedings of the ACM International Conference on
   Multimedia}, pages 675--678. ACM, 2014.
 
-\bibitem{cal-traffic-study}
-C.~Katz.
-\newblock People in poor neighborhoods breathe more hazardous particles
-  {@ONLINE}, June 2012.
-
 \bibitem{mcdonalds}
 A.~Khosla, B.~An, J.~J. Lim, and A.~Torralba.
 \newblock Looking beyond the visible scene.
@@ -81,6 +87,11 @@ A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton.
 \newblock Imagenet classification with deep convolutional neural networks.
 \newblock In {\em Advances in neural information processing systems}, pages
   1097--1105, 2012.
+
+\bibitem{cnn}
+Y.~LeCun and Y.~Bengio.
+\newblock Convolutional networks for images, speech, and time series.
+\newblock {\em The handbook of brain theory and neural networks}, 3361, 1995.
 
 \bibitem{foreign_domestic}
 J.~Levine.
@@ -105,6 +116,12 @@ N.~Naik, J.~Philipoom, R.~Raskar, and C.~Hidalgo.
   streetscapes.
 \newblock In {\em Computer Vision and Pattern Recognition Workshops (CVPRW),
   2014 IEEE Conference on}, pages 793--799. IEEE, 2014.
+
+\bibitem{gist}
+A.~Oliva and A.~Torralba.
+\newblock Modeling the shape of the scene: A holistic representation of the
+  spatial envelope.
+\newblock {\em International journal of computer vision}, 42(3):145--175, 2001.
 
 \bibitem{tamara}
 V.~Ordonez and T.~L. Berg.

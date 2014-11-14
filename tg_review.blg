@@ -4,58 +4,54 @@ The style file: ieee.bst
 Database file #1: egbib.bib
 Warning--entry type for "car_stats" isn't style-file defined
 --line 99 of file egbib.bib
-Warning--entry type for "cal-traffic-study" isn't style-file defined
---line 190 of file egbib.bib
 Warning--entry type for "ground_air" isn't style-file defined
 --line 198 of file egbib.bib
 Warning--entry type for "foreign_domestic" isn't style-file defined
 --line 206 of file egbib.bib
-Warning--I didn't find a database entry for "gist"
-Warning--I didn't find a database entry for "cnn"
 Warning--empty journal in mcdonalds
 Warning--empty year in mcdonalds
 Warning--empty journal in cars
 Warning--empty year in cars
 Warning--empty journal in birds
-You've used 25 entries,
+You've used 28 entries,
             2120 wiz_defined-function locations,
-            625 strings with 8213 characters,
-and the built_in function-call counts, 10165 in all, are:
-= -- 983
-> -- 561
-< -- 10
-+ -- 223
-- -- 196
-* -- 708
-:= -- 1623
-add.period$ -- 78
-call.type$ -- 25
-change.case$ -- 172
+            644 strings with 8796 characters,
+and the built_in function-call counts, 11343 in all, are:
+= -- 1104
+> -- 616
+< -- 11
++ -- 244
+- -- 214
+* -- 786
+:= -- 1814
+add.period$ -- 89
+call.type$ -- 28
+change.case$ -- 190
 chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 388
-empty$ -- 749
-format.name$ -- 196
-if$ -- 2172
+cite$ -- 33
+duplicate$ -- 440
+empty$ -- 840
+format.name$ -- 214
+if$ -- 2426
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 21
-newline$ -- 122
-num.names$ -- 50
-pop$ -- 232
+int.to.str$ -- 28
+missing$ -- 25
+newline$ -- 138
+num.names$ -- 56
+pop$ -- 248
 preamble$ -- 1
-purify$ -- 147
+purify$ -- 162
 quote$ -- 0
-skip$ -- 295
+skip$ -- 330
 stack$ -- 0
-substring$ -- 546
-swap$ -- 123
-text.length$ -- 10
+substring$ -- 618
+swap$ -- 136
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 100
+type$ -- 112
 warning$ -- 5
-while$ -- 86
-width$ -- 27
-write$ -- 261
-(There were 11 warnings)
+while$ -- 97
+width$ -- 30
+write$ -- 297
+(There were 8 warnings)
